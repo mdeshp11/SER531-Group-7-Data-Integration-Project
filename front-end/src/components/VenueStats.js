@@ -11,6 +11,9 @@ import {
 // Register required Chart.js components
 ChartJS.register(ArcElement, Tooltip, Legend);
 
+//BACKEND URL
+const backendURL = 'http://127.0.0.1:5050'
+
 function VenueStats() {
   const [venues, setVenues] = useState([]); // State to store venue data from API
   const [selectedVenue, setSelectedVenue] = useState(null);
@@ -19,7 +22,7 @@ function VenueStats() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:5000/api/sparql/venue_stats");
+        const response = await axios.get(backendURL + '/api/ipl_server');
         console.log("API Response:", response.data);
         setVenues(response.data); // Assuming the API returns an array of venue data
       } catch (error) {
