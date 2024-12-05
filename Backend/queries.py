@@ -20,3 +20,27 @@ venue_stats = """
     GROUP BY ?stadium
     ORDER BY ?stadium
     """
+
+bowling_first = """
+    PREFIX smw: <http://example.org/ipl/1.0.0/matches#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT ?team ?bowlingFirstRuns
+    WHERE {
+        ?match smw:tossDecision "field" ;
+        smw:wonBy ?team ;
+        smw:targetRuns ?bowlingFirstRuns .
+    }
+    """
+
+batting_first = """
+    PREFIX smw: <http://example.org/ipl/1.0.0/matches#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT ?team ?battingFirstRuns
+    WHERE {
+        ?match smw:tossDecision "bat" ;
+        smw:tossWinner ?team ;
+        smw:targetRuns ?battingFirstRuns .
+    }
+    """
