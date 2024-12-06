@@ -74,9 +74,7 @@ Set up the frontend application with the following steps:
 1. Ensure that the backend server, Apache Jena Fuseki server, and frontend application are running.
 2. Access the application in your web browser at:
     ```bash
-    
     http://localhost:3000
-
     ```
 ---
 
