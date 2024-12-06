@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 import requests
 import os
-from queries import venue_stats, bowling_first, batting_first
+from queries import venue_stats, bowling_first, batting_first, clutch_bowler, clutch_batsman, clutch_fielder
 
 app = Flask(__name__)
 CORS(app, origins='*')
@@ -45,6 +45,7 @@ def venue_statistics():
     return jsonify(formatted_results)
 
 # Team Stats API
+# TODO: Review query once
 @app.route('/api/ipl_server/team_stats', methods=['GET'])
 def team_stats():
     # Fetch bowling stats
@@ -96,6 +97,118 @@ def get_batting_stats():
         team = binding["team"]["value"]
         batting_data[team] = binding["battingFirstRuns"]["value"]
     return batting_data
+
+# clutch players API
+@app.route('/api/ipl_server/clutch_players', methods=['GET'])
+def clutch_players():
+    # Getting Clutch bowlers
+    bowlers = clutch_bowlers()
+
+    # Getting clutch batsmen
+    batsmen = clutch_batsmen()
+
+    # Getting clutch fielders
+    fielders = clutch_fielders()
+
+    merged_data = {}
+
+    # Combining all the players team wise
+    for team in {**bowlers, **batsmen, **fielders}:
+        merged_data[team] = {
+            "batsmen": {player["batsmen"]: {
+                "totalRuns": player["totalRuns"],
+                "strikeRate": player["strikeRate"]
+            } for player in batsmen.get(team, [])},
+            "bowlers": {player["bowler"]: {
+                "totalWickets": player["totalWickets"]
+            } for player in bowlers.get(team, [])},
+            "fielders": {player["fielder"]: {
+                "catches": player["catches"],
+                "runouts": player["runouts"],
+                "totalContributions": player["totalContributions"]
+            } for player in fielders.get(team, [])}
+        }
+
+    return merged_data
+
+# Helper function to get the clutch bowlers
+def clutch_bowlers():
+   # fetch players
+   result = execute_sparql_query(clutch_bowler)
+   if "error" in result:
+       return {"error:", result["error"]}
+   
+   # print('Bowlers result', result)
+   formatted_bowler = {}
+
+   for binding in result.get("results", {}).get("bindings", []):
+       team = binding["teamName"]["value"]
+       bowler = binding["bowler"]["value"]
+       totalWickets = binding["totalWickets"]["value"]
+
+       if team not in formatted_bowler:
+           formatted_bowler[team] = []
+
+       formatted_bowler[team].append({
+            "bowler": bowler,
+            "totalWickets": totalWickets
+        })
+       
+   return formatted_bowler
+
+# Helper function to get the clutch batsmen
+def clutch_batsmen():
+    result = execute_sparql_query(clutch_batsman)
+    if "error" in result:
+       return {"error:", result["error"]}
+   
+    # print('Batsmen result', result)
+    formatted_batsmen = {}
+
+    for binding in result.get("results", {}).get("bindings", []):
+       team = binding["teamName"]["value"]
+       batter = binding["batter"]["value"]
+       totalRuns = binding["totalRuns"]["value"]
+       strikeRate = binding["strikeRate"]["value"]
+
+       if team not in formatted_batsmen:
+           formatted_batsmen[team] = []
+
+       formatted_batsmen[team].append({
+            "batsmen": batter,
+            "totalRuns": totalRuns,
+            "strikeRate": strikeRate
+        })
+       
+    return formatted_batsmen
+
+# Helper function to get the clutch fielders
+def clutch_fielders():
+    result = execute_sparql_query(clutch_fielder)
+    if "error" in result:
+       return {"error:", result["error"]}
+   
+    # print('Fielders result', result)
+    formatted_fielders = {}
+
+    for binding in result.get("results", {}).get("bindings", []):
+       team = binding["teamName"]["value"]
+       fielder = binding["fielder"]["value"]
+       totalContributions = binding["totalContributions"]["value"]
+       catches = binding["catches"]["value"]
+       runouts = binding["runouts"]["value"]
+
+       if team not in formatted_fielders:
+           formatted_fielders[team] = []
+
+       formatted_fielders[team].append({
+            "fielder": fielder,
+            "totalContributions": totalContributions,
+            "catches": catches,
+            "runouts": runouts
+        })
+       
+    return formatted_fielders
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5050, debug=True)
