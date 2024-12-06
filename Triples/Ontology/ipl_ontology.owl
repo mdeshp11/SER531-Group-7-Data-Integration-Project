@@ -1,0 +1,508 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/ipl#"
+     xml:base="http://example.org/ipl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://example.org/ipl">
+        <owl:versionIRI rdf:resource="http://example.org/ipl/1.0.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/ipl#belongsToTeam -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ipl#belongsToTeam">
+        <rdfs:domain rdf:resource="http://example.org/ipl#Player"/>
+        <rdfs:range rdf:resource="http://example.org/ipl#Team"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ipl#deliveredBy -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ipl#deliveredBy">
+        <rdfs:domain rdf:resource="http://example.org/ipl#BallDelivery"/>
+        <rdfs:range rdf:resource="http://example.org/ipl#Player"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ipl#facedBy -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ipl#facedBy">
+        <rdfs:domain rdf:resource="http://example.org/ipl#BallDelivery"/>
+        <rdfs:range rdf:resource="http://example.org/ipl#Player"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ipl#hasBatter -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ipl#hasBatter">
+        <rdfs:domain rdf:resource="http://example.org/ipl#BallDelivery"/>
+        <rdfs:range rdf:resource="http://example.org/ipl#Player"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ipl#hasBattingTeam -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ipl#hasBattingTeam">
+        <rdfs:domain rdf:resource="http://example.org/ipl#Match"/>
+        <rdfs:range rdf:resource="http://example.org/ipl#Team"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ipl#hasBowler -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ipl#hasBowler">
+        <rdfs:domain rdf:resource="http://example.org/ipl#BallDelivery"/>
+        <rdfs:range rdf:resource="http://example.org/ipl#Player"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ipl#hasBowlingTeam -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ipl#hasBowlingTeam">
+        <rdfs:domain rdf:resource="http://example.org/ipl#Match"/>
+        <rdfs:range rdf:resource="http://example.org/ipl#Team"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ipl#hasFielder -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ipl#hasFielder">
+        <rdfs:domain rdf:resource="http://example.org/ipl#BallDelivery"/>
+        <rdfs:range rdf:resource="http://example.org/ipl#Player"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ipl#hasMatchType -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ipl#hasMatchType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://example.org/ipl#Match"/>
+        <rdfs:range rdf:resource="http://example.org/ipl#KnockoutMatch"/>
+        <rdfs:range rdf:resource="http://example.org/ipl#LeagueMatch"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ipl#hasNonStriker -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ipl#hasNonStriker">
+        <rdfs:domain rdf:resource="http://example.org/ipl#BallDelivery"/>
+        <rdfs:range rdf:resource="http://example.org/ipl#Player"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ipl#hasPlayerDismissed -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ipl#hasPlayerDismissed">
+        <rdfs:domain rdf:resource="http://example.org/ipl#BallDelivery"/>
+        <rdfs:range rdf:resource="http://example.org/ipl#Player"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ipl#hasPlayerOfMatch -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ipl#hasPlayerOfMatch">
+        <rdfs:domain rdf:resource="http://example.org/ipl#Match"/>
+        <rdfs:range rdf:resource="http://example.org/ipl#Player"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ipl#hasTeam1 -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ipl#hasTeam1">
+        <rdfs:domain rdf:resource="http://example.org/ipl#Match"/>
+        <rdfs:range rdf:resource="http://example.org/ipl#Team"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ipl#hasTeam2 -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ipl#hasTeam2">
+        <rdfs:domain rdf:resource="http://example.org/ipl#Match"/>
+        <rdfs:range rdf:resource="http://example.org/ipl#Team"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ipl#typeOfPlayer -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ipl#typeOfPlayer">
+        <rdfs:domain rdf:resource="http://example.org/ipl#Player"/>
+        <rdfs:range rdf:resource="http://example.org/ipl#AllRounder"/>
+        <rdfs:range rdf:resource="http://example.org/ipl#Batsman"/>
+        <rdfs:range rdf:resource="http://example.org/ipl#Bowler"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ipl#wasDeliveredIn -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ipl#wasDeliveredIn">
+        <rdfs:domain rdf:resource="http://example.org/ipl#BallDelivery"/>
+        <rdfs:range rdf:resource="http://example.org/ipl#Match"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ipl#wasPlayedOn -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ipl#wasPlayedOn">
+        <rdfs:domain rdf:resource="http://example.org/ipl#Match"/>
+        <rdfs:range rdf:resource="http://example.org/ipl#Venue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/ipl#wonBy -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/ipl#wonBy">
+        <rdfs:domain rdf:resource="http://example.org/ipl#Match"/>
+        <rdfs:range rdf:resource="http://example.org/ipl#Team"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/ipl#ballNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ipl#ballNumber">
+        <rdfs:domain rdf:resource="http://example.org/ipl#BallDelivery"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ipl#batsmanRuns -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ipl#batsmanRuns">
+        <rdfs:domain rdf:resource="http://example.org/ipl#BallDelivery"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ipl#city -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ipl#city">
+        <rdfs:domain rdf:resource="http://example.org/ipl#Match"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ipl#date -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ipl#date">
+        <rdfs:domain rdf:resource="http://example.org/ipl#Match"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ipl#dismissal_kind -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ipl#dismissal_kind">
+        <rdfs:domain rdf:resource="http://example.org/ipl#BallDelivery"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ipl#extraRuns -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ipl#extraRuns">
+        <rdfs:domain rdf:resource="http://example.org/ipl#BallDelivery"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ipl#extrasType -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ipl#extrasType">
+        <rdfs:domain rdf:resource="http://example.org/ipl#BallDelivery"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ipl#inningNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ipl#inningNumber">
+        <rdfs:domain rdf:resource="http://example.org/ipl#BallDelivery"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ipl#isWicket -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ipl#isWicket">
+        <rdfs:domain rdf:resource="http://example.org/ipl#BallDelivery"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ipl#matchID -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ipl#matchID">
+        <rdfs:domain rdf:resource="http://example.org/ipl#Match"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ipl#method -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ipl#method">
+        <rdfs:domain rdf:resource="http://example.org/ipl#Match"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ipl#overNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ipl#overNumber">
+        <rdfs:domain rdf:resource="http://example.org/ipl#BallDelivery"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ipl#result -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ipl#result">
+        <rdfs:domain rdf:resource="http://example.org/ipl#Match"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ipl#resultMargin -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ipl#resultMargin">
+        <rdfs:domain rdf:resource="http://example.org/ipl#Match"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ipl#season -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ipl#season">
+        <rdfs:domain rdf:resource="http://example.org/ipl#Match"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ipl#super_over -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ipl#super_over">
+        <rdfs:domain rdf:resource="http://example.org/ipl#Match"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ipl#targetOvers -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ipl#targetOvers">
+        <rdfs:domain rdf:resource="http://example.org/ipl#Match"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ipl#targetRuns -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ipl#targetRuns">
+        <rdfs:domain rdf:resource="http://example.org/ipl#Match"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ipl#tossDecision -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ipl#tossDecision">
+        <rdfs:domain rdf:resource="http://example.org/ipl#Match"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ipl#tossWinner -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ipl#tossWinner">
+        <rdfs:domain rdf:resource="http://example.org/ipl#Match"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/ipl#totalRuns -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/ipl#totalRuns">
+        <rdfs:domain rdf:resource="http://example.org/ipl#BallDelivery"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/ipl#AllRounder -->
+
+    <owl:Class rdf:about="http://example.org/ipl#AllRounder">
+        <rdfs:subClassOf rdf:resource="http://example.org/ipl#Player"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ipl#BallDelivery -->
+
+    <owl:Class rdf:about="http://example.org/ipl#BallDelivery">
+        <rdfs:subClassOf rdf:resource="http://example.org/ipl#League"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ipl#Batsman -->
+
+    <owl:Class rdf:about="http://example.org/ipl#Batsman">
+        <rdfs:subClassOf rdf:resource="http://example.org/ipl#Player"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ipl#Bowler -->
+
+    <owl:Class rdf:about="http://example.org/ipl#Bowler">
+        <rdfs:subClassOf rdf:resource="http://example.org/ipl#Player"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ipl#KnockoutMatch -->
+
+    <owl:Class rdf:about="http://example.org/ipl#KnockoutMatch">
+        <rdfs:subClassOf rdf:resource="http://example.org/ipl#Match"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ipl#League -->
+
+    <owl:Class rdf:about="http://example.org/ipl#League"/>
+    
+
+
+    <!-- http://example.org/ipl#LeagueMatch -->
+
+    <owl:Class rdf:about="http://example.org/ipl#LeagueMatch">
+        <rdfs:subClassOf rdf:resource="http://example.org/ipl#Match"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ipl#Match -->
+
+    <owl:Class rdf:about="http://example.org/ipl#Match">
+        <rdfs:subClassOf rdf:resource="http://example.org/ipl#League"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ipl#Player -->
+
+    <owl:Class rdf:about="http://example.org/ipl#Player">
+        <rdfs:subClassOf rdf:resource="http://example.org/ipl#League"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ipl#Team -->
+
+    <owl:Class rdf:about="http://example.org/ipl#Team">
+        <rdfs:subClassOf rdf:resource="http://example.org/ipl#League"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/ipl#Venue -->
+
+    <owl:Class rdf:about="http://example.org/ipl#Venue">
+        <rdfs:subClassOf rdf:resource="http://example.org/ipl#League"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
