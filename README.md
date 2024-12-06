@@ -86,4 +86,7 @@ Set up the frontend application with the following steps:
 - **Dataset preprocessing**: Google Sheets, Pandas
 - **Knowledge graph**: Ontotext Refine
 
-    
+
+## Design Changes
+
+The ontology development process now includes mapping raw cricket data from CSV files to RDF triples using specific predicates like smw:hasBatter and smw:hasBowler, ensuring seamless integration with Apache Jena Fuseki. This process is further explained with algorithms detailing how attributes from datasets are transformed into ontology-compatible formats. Additionally, reasoning capabilities have been refined to infer new knowledge from existing relationships. For instance, a player’s dismissal can now be dynamically linked to their performance in a match. The OntoGraf plugin in Protégé has been leveraged to visually represent these enhanced relationships, highlighting the interconnectedness of classes like Match, Player, Venue, and their respective properties.
