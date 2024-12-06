@@ -34,17 +34,7 @@ bowling_first = """
     }
     """
 
-batting_first = """
-    PREFIX smw: <http://example.org/ipl/1.0.0/matches#>
-    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-    SELECT ?team ?battingFirstRuns
-    WHERE {
-        ?match smw:tossDecision "bat" ;
-        smw:tossWinner ?team ;
-        smw:targetRuns ?battingFirstRuns .
-    }
-    """
 
 # PREFIX smw: <http://example.org/ipl/1.0.0/deliveries_one#>
 # PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
