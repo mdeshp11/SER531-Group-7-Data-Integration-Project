@@ -1,908 +1,1139 @@
 @base <http://example.org/ipl/1.0.0> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix smw: <http://example.org/ipl/1.0.0/matches#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix smw: <http://example.org/ipl/1.0.0#> .
 
-smw:VKohli a smw:PlayerName;
+smw:1 a smw:Player_ID;
+  smw:hasPlayerName "V Kohli";
   smw:belongsToTeam "Royal Challengers Bengaluru";
   smw:typeOfPlayer "BAT" .
 
-smw:RM%20Patidar a smw:PlayerName;
+smw:2 a smw:Player_ID;
+  smw:hasPlayerName "RM Patidar";
   smw:belongsToTeam "Royal Challengers Bengaluru";
   smw:typeOfPlayer "BAT" .
 
-smw:Yash%20Dayal a smw:PlayerName;
+smw:3 a smw:Player_ID;
+  smw:hasPlayerName "Yash Dayal";
   smw:belongsToTeam "Royal Challengers Bengaluru";
   smw:typeOfPlayer "BOWL" .
 
-smw:JJ%20Bumrah a smw:PlayerName;
+smw:4 a smw:Player_ID;
+  smw:hasPlayerName "JJ Bumrah";
   smw:belongsToTeam "Mumbai Indians";
   smw:typeOfPlayer "BOWL" .
 
-smw:SA%20Yadav a smw:PlayerName;
+smw:5 a smw:Player_ID;
+  smw:hasPlayerName "SA Yadav";
   smw:belongsToTeam "Mumbai Indians";
   smw:typeOfPlayer "BAT" .
 
-smw:HH%20Pandya a smw:PlayerName;
+smw:6 a smw:Player_ID;
+  smw:hasPlayerName "HH Pandya";
   smw:belongsToTeam "Mumbai Indians";
   smw:typeOfPlayer "AR" .
 
-smw:RG%20Sharma a smw:PlayerName;
+smw:7 a smw:Player_ID;
+  smw:hasPlayerName "RG Sharma";
   smw:belongsToTeam "Mumbai Indians";
   smw:typeOfPlayer "BAT" .
 
-smw:Tilak%20Varma a smw:PlayerName;
+smw:8 a smw:Player_ID;
+  smw:hasPlayerName "Tilak Varma";
   smw:belongsToTeam "Mumbai Indians";
   smw:typeOfPlayer "AR" .
 
-smw:H%20Klaasen a smw:PlayerName;
+smw:9 a smw:Player_ID;
+  smw:hasPlayerName "H Klaasen";
   smw:belongsToTeam "Sunrisers Hyderabad";
   smw:typeOfPlayer "BAT" .
 
-smw:PJ%20Cummins a smw:PlayerName;
+smw:10 a smw:Player_ID;
+  smw:hasPlayerName "PJ Cummins";
   smw:belongsToTeam "Sunrisers Hyderabad";
   smw:typeOfPlayer "AR" .
 
-smw:Abhishek%20Sharma a smw:PlayerName;
+smw:11 a smw:Player_ID;
+  smw:hasPlayerName "Abhishek Sharma";
   smw:belongsToTeam "Sunrisers Hyderabad";
   smw:typeOfPlayer "AR" .
 
-smw:TM%20Head a smw:PlayerName;
+smw:12 a smw:Player_ID;
+  smw:hasPlayerName "TM Head";
   smw:belongsToTeam "Sunrisers Hyderabad";
   smw:typeOfPlayer "BAT" .
 
-smw:Nithish%20Kumar%20Reddy a smw:PlayerName;
+smw:13 a smw:Player_ID;
+  smw:hasPlayerName "Nithish Kumar Reddy";
   smw:belongsToTeam "Sunrisers Hyderabad";
   smw:typeOfPlayer "AR" .
 
-smw:RD%20Gaikwad a smw:PlayerName;
+smw:14 a smw:Player_ID;
+  smw:hasPlayerName "RD Gaikwad";
   smw:belongsToTeam "Chennai Super Kings";
   smw:typeOfPlayer "BAT" .
 
-smw:RA%20Jadeja a smw:PlayerName;
+smw:15 a smw:Player_ID;
+  smw:hasPlayerName "RA Jadeja";
   smw:belongsToTeam "Chennai Super Kings";
   smw:typeOfPlayer "AR" .
 
-smw:M%20Pathirana a smw:PlayerName;
+smw:16 a smw:Player_ID;
+  smw:hasPlayerName "M Pathirana";
   smw:belongsToTeam "Chennai Super Kings";
   smw:typeOfPlayer "BOWL" .
 
-smw:S%20Dube a smw:PlayerName;
+smw:17 a smw:Player_ID;
+  smw:hasPlayerName "S Dube";
   smw:belongsToTeam "Chennai Super Kings";
   smw:typeOfPlayer "AR" .
 
-smw:MS%20Dhoni a smw:PlayerName;
+smw:18 a smw:Player_ID;
+  smw:hasPlayerName "MS Dhoni";
   smw:belongsToTeam "Chennai Super Kings";
   smw:typeOfPlayer "BAT" .
 
-smw:AR%20Patel a smw:PlayerName;
+smw:19 a smw:Player_ID;
+  smw:hasPlayerName "AR Patel";
   smw:belongsToTeam "Delhi Capitals";
   smw:typeOfPlayer "AR" .
 
-smw:Kuldeep%20Yadav a smw:PlayerName;
+smw:20 a smw:Player_ID;
+  smw:hasPlayerName "Kuldeep Yadav";
   smw:belongsToTeam "Delhi Capitals";
   smw:typeOfPlayer "BOWL" .
 
-smw:T%20Stubbs a smw:PlayerName;
+smw:21 a smw:Player_ID;
+  smw:hasPlayerName "T Stubbs";
   smw:belongsToTeam "Delhi Capitals";
   smw:typeOfPlayer "BAT" .
 
-smw:Abishek%20Porel a smw:PlayerName;
+smw:22 a smw:Player_ID;
+  smw:hasPlayerName "Abishek Porel";
   smw:belongsToTeam "Delhi Capitals";
   smw:typeOfPlayer "BAT" .
 
-smw:RK%20Singh a smw:PlayerName;
+smw:23 a smw:Player_ID;
+  smw:hasPlayerName "RK Singh";
   smw:belongsToTeam "Kolkata Knight Riders";
   smw:typeOfPlayer "BAT" .
 
-smw:CV%20Varun a smw:PlayerName;
+smw:24 a smw:Player_ID;
+  smw:hasPlayerName "CV Varun";
   smw:belongsToTeam "Kolkata Knight Riders";
   smw:typeOfPlayer "AR" .
 
-smw:SP%20Narine a smw:PlayerName;
+smw:25 a smw:Player_ID;
+  smw:hasPlayerName "SP Narine";
   smw:belongsToTeam "Kolkata Knight Riders";
   smw:typeOfPlayer "BOWL" .
 
-smw:AD%20Russell a smw:PlayerName;
+smw:26 a smw:Player_ID;
+  smw:hasPlayerName "AD Russell";
   smw:belongsToTeam "Kolkata Knight Riders";
   smw:typeOfPlayer "AR" .
 
-smw:Harshit%20Rana a smw:PlayerName;
+smw:27 a smw:Player_ID;
+  smw:hasPlayerName "Harshit Rana";
   smw:belongsToTeam "Kolkata Knight Riders";
   smw:typeOfPlayer "BOWL" .
 
-smw:Ramandeep%20Singh a smw:PlayerName;
+smw:28 a smw:Player_ID;
+  smw:hasPlayerName "Ramandeep Singh";
   smw:belongsToTeam "Kolkata Knight Riders";
   smw:typeOfPlayer "AR" .
 
-smw:SV%20Samson a smw:PlayerName;
+smw:29 a smw:Player_ID;
+  smw:hasPlayerName "SV Samson";
   smw:belongsToTeam "Rajasthan Royals";
   smw:typeOfPlayer "BAT" .
 
-smw:YBK%20Jaiswal a smw:PlayerName;
+smw:30 a smw:Player_ID;
+  smw:hasPlayerName "YBK Jaiswal";
   smw:belongsToTeam "Rajasthan Royals";
   smw:typeOfPlayer "AR" .
 
-smw:R%20Parag a smw:PlayerName;
+smw:31 a smw:Player_ID;
+  smw:hasPlayerName "R Parag";
   smw:belongsToTeam "Rajasthan Royals";
   smw:typeOfPlayer "AR" .
 
-smw:Dhruv%20Jurel a smw:PlayerName;
+smw:32 a smw:Player_ID;
+  smw:hasPlayerName "Dhruv Jurel";
   smw:belongsToTeam "Rajasthan Royals";
   smw:typeOfPlayer "BAT" .
 
-smw:SO%20Hetmyer a smw:PlayerName;
+smw:33 a smw:Player_ID;
+  smw:hasPlayerName "SO Hetmyer";
   smw:belongsToTeam "Rajasthan Royals";
   smw:typeOfPlayer "BAT" .
 
-smw:Sandeep%20Sharma a smw:PlayerName;
+smw:34 a smw:Player_ID;
+  smw:hasPlayerName "Sandeep Sharma";
   smw:belongsToTeam "Rajasthan Royals";
   smw:typeOfPlayer "BOWL" .
 
-smw:Rashid%20Khan a smw:PlayerName;
+smw:35 a smw:Player_ID;
+  smw:hasPlayerName "Rashid Khan";
   smw:belongsToTeam "Gujarat Titans";
   smw:typeOfPlayer "BOWL" .
 
-smw:Shubman%20Gill a smw:PlayerName;
+smw:36 a smw:Player_ID;
+  smw:hasPlayerName "Shubman Gill";
   smw:belongsToTeam "Gujarat Titans";
   smw:typeOfPlayer "BAT" .
 
-smw:B%20Sai%20Sudharsan a smw:PlayerName;
+smw:37 a smw:Player_ID;
+  smw:hasPlayerName "B Sai Sudharsan";
   smw:belongsToTeam "Gujarat Titans";
   smw:typeOfPlayer "AR" .
 
-smw:R%20Tewatia a smw:PlayerName;
+smw:38 a smw:Player_ID;
+  smw:hasPlayerName "R Tewatia";
   smw:belongsToTeam "Gujarat Titans";
   smw:typeOfPlayer "AR" .
 
-smw:M%20Shahrukh%20Khan a smw:PlayerName;
+smw:39 a smw:Player_ID;
+  smw:hasPlayerName "M Shahrukh Khan";
   smw:belongsToTeam "Gujarat Titans";
   smw:typeOfPlayer "AR" .
 
-smw:N%20Pooran a smw:PlayerName;
+smw:40 a smw:Player_ID;
+  smw:hasPlayerName "N Pooran";
   smw:belongsToTeam "Lucknow Super Giants";
   smw:typeOfPlayer "BAT" .
 
-smw:Ravi%20Bishnoi a smw:PlayerName;
+smw:41 a smw:Player_ID;
+  smw:hasPlayerName "Ravi Bishnoi";
   smw:belongsToTeam "Lucknow Super Giants";
   smw:typeOfPlayer "BOWL" .
 
-smw:MP%20Yadav a smw:PlayerName;
+smw:42 a smw:Player_ID;
+  smw:hasPlayerName "MP Yadav";
   smw:belongsToTeam "Lucknow Super Giants";
   smw:typeOfPlayer "BOWL" .
 
-smw:Mohsin%20Khan a smw:PlayerName;
+smw:43 a smw:Player_ID;
+  smw:hasPlayerName "Mohsin Khan";
   smw:belongsToTeam "Lucknow Super Giants";
   smw:typeOfPlayer "BOWL" .
 
-smw:ABadoni a smw:PlayerName;
+smw:44 a smw:Player_ID;
+  smw:hasPlayerName "A Badoni";
   smw:belongsToTeam "Lucknow Super Giants";
   smw:typeOfPlayer "AR" .
 
-smw:Shashank%20Singh a smw:PlayerName;
+smw:45 a smw:Player_ID;
+  smw:hasPlayerName "Shashank Singh";
   smw:belongsToTeam "Punjab Kings";
   smw:typeOfPlayer "AR" .
 
-smw:P%20Simran%20Singh a smw:PlayerName;
+smw:46 a smw:Player_ID;
+  smw:hasPlayerName "P Simran Singh";
   smw:belongsToTeam "Punjab Kings";
   smw:typeOfPlayer "BAT" .
 
-smw:JC%20Buttler a smw:PlayerName;
+smw:47 a smw:Player_ID;
+  smw:hasPlayerName "JC Buttler";
   smw:belongsToTeam "Gujarat Titans";
   smw:typeOfPlayer "BAT" .
 
-smw:SS%20Iyer a smw:PlayerName;
+smw:48 a smw:Player_ID;
+  smw:hasPlayerName "SS Iyer";
   smw:belongsToTeam "Punjab Kings";
   smw:typeOfPlayer "BAT" .
 
-smw:RR%20Pant a smw:PlayerName;
+smw:49 a smw:Player_ID;
+  smw:hasPlayerName "RR Pant";
   smw:belongsToTeam "Lucknow Super Giants";
   smw:typeOfPlayer "BAT" .
 
-smw:K%20Rabada a smw:PlayerName;
+smw:50 a smw:Player_ID;
+  smw:hasPlayerName "K Rabada";
   smw:belongsToTeam "Gujarat Titans";
   smw:typeOfPlayer "BOWL" .
 
-smw:Arshdeep%20Singh a smw:PlayerName;
+smw:51 a smw:Player_ID;
+  smw:hasPlayerName "Arshdeep Singh";
   smw:belongsToTeam "Punjab Kings";
   smw:typeOfPlayer "BOWL" .
 
-smw:MA%20Starc a smw:PlayerName;
+smw:52 a smw:Player_ID;
+  smw:hasPlayerName "MA Starc";
   smw:belongsToTeam "Delhi Capitals";
   smw:typeOfPlayer "BOWL" .
 
-smw:YS%20Chahal a smw:PlayerName;
+smw:53 a smw:Player_ID;
+  smw:hasPlayerName "YS Chahal";
   smw:belongsToTeam "Punjab Kings";
   smw:typeOfPlayer "BOWL" .
 
-smw:LS%20Livingstone a smw:PlayerName;
+smw:54 a smw:Player_ID;
+  smw:hasPlayerName "LS Livingstone";
   smw:belongsToTeam "Royal Challengers Bengaluru";
   smw:typeOfPlayer "AR" .
 
-smw:DA%20Miller a smw:PlayerName;
+smw:55 a smw:Player_ID;
+  smw:hasPlayerName "DA Miller";
   smw:belongsToTeam "Lucknow Super Giants";
   smw:typeOfPlayer "BAT" .
 
-smw:KL%20Rahul a smw:PlayerName;
+smw:56 a smw:Player_ID;
+  smw:hasPlayerName "KL Rahul";
   smw:belongsToTeam "Delhi Capitals";
   smw:typeOfPlayer "BAT" .
 
-smw:Mohammed%20Shami a smw:PlayerName;
+smw:57 a smw:Player_ID;
+  smw:hasPlayerName "Mohammed Shami";
   smw:belongsToTeam "Sunrisers Hyderabad";
   smw:typeOfPlayer "BOWL" .
 
-smw:Mohammed%20Siraj a smw:PlayerName;
+smw:58 a smw:Player_ID;
+  smw:hasPlayerName "Mohammed Siraj";
   smw:belongsToTeam "Gujarat Titans";
   smw:typeOfPlayer "BOWL" .
 
-smw:HC%20Brook a smw:PlayerName;
+smw:59 a smw:Player_ID;
+  smw:hasPlayerName "HC Brook";
   smw:belongsToTeam "Delhi Capitals";
   smw:typeOfPlayer "BAT" .
 
-smw:DP%20Conway a smw:PlayerName;
+smw:60 a smw:Player_ID;
+  smw:hasPlayerName "DP Conway";
   smw:belongsToTeam "Chennai Super Kings";
   smw:typeOfPlayer "BAT" .
 
-smw:J%20Fraser-McGurk a smw:PlayerName;
+smw:61 a smw:Player_ID;
+  smw:hasPlayerName "J Fraser-McGurk";
   smw:belongsToTeam "Delhi Capitals";
   smw:typeOfPlayer "BAT" .
 
-smw:AK%20Markram a smw:PlayerName;
+smw:62 a smw:Player_ID;
+  smw:hasPlayerName "AK Markram";
   smw:belongsToTeam "Lucknow Super Giants";
   smw:typeOfPlayer "BAT" .
 
-smw:D%20Padikkal a smw:PlayerName;
+smw:63 a smw:Player_ID;
+  smw:hasPlayerName "D Padikkal";
   smw:belongsToTeam "Royal Challengers Bengaluru";
   smw:typeOfPlayer "BAT" .
 
-smw:RA%20Tripathi a smw:PlayerName;
+smw:64 a smw:Player_ID;
+  smw:hasPlayerName "RA Tripathi";
   smw:belongsToTeam "Chennai Super Kings";
   smw:typeOfPlayer "BAT" .
 
-smw:R%20Ashwin a smw:PlayerName;
+smw:65 a smw:Player_ID;
+  smw:hasPlayerName "R Ashwin";
   smw:belongsToTeam "Chennai Super Kings";
   smw:typeOfPlayer "AR" .
 
-smw:VR%20Iyer a smw:PlayerName;
+smw:66 a smw:Player_ID;
+  smw:hasPlayerName "VR Iyer";
   smw:belongsToTeam "Kolkata Knight Riders";
   smw:typeOfPlayer "AR" .
 
-smw:MR%20Marsh a smw:PlayerName;
+smw:67 a smw:Player_ID;
+  smw:hasPlayerName "MR Marsh";
   smw:belongsToTeam "Lucknow Super Giants";
   smw:typeOfPlayer "AR" .
 
-smw:GJ%20Maxwell a smw:PlayerName;
+smw:68 a smw:Player_ID;
+  smw:hasPlayerName "GJ Maxwell";
   smw:belongsToTeam "Punjab Kings";
   smw:typeOfPlayer "AR" .
 
-smw:HV%20Patel a smw:PlayerName;
+smw:69 a smw:Player_ID;
+  smw:hasPlayerName "HV Patel";
   smw:belongsToTeam "Sunrisers Hyderabad";
   smw:typeOfPlayer "AR" .
 
-smw:R%20Ravindra a smw:PlayerName;
+smw:70 a smw:Player_ID;
+  smw:hasPlayerName "R Ravindra";
   smw:belongsToTeam "Chennai Super Kings";
   smw:typeOfPlayer "AR" .
 
-smw:MP%20Stoinis a smw:PlayerName;
+smw:71 a smw:Player_ID;
+  smw:hasPlayerName "MP Stoinis";
   smw:belongsToTeam "Punjab Kings";
   smw:typeOfPlayer "AR" .
 
-smw:Q%20de%20Kock a smw:PlayerName;
+smw:72 a smw:Player_ID;
+  smw:hasPlayerName "Q de Kock";
   smw:belongsToTeam "Kolkata Knight Riders";
   smw:typeOfPlayer "BAT" .
 
-smw:Rahmanullah%20Gurbaz a smw:PlayerName;
+smw:73 a smw:Player_ID;
+  smw:hasPlayerName "Rahmanullah Gurbaz";
   smw:belongsToTeam "Kolkata Knight Riders";
   smw:typeOfPlayer "BAT" .
 
-smw:Ishan%20Kishan a smw:PlayerName;
+smw:74 a smw:Player_ID;
+  smw:hasPlayerName "Ishan Kishan";
   smw:belongsToTeam "Sunrisers Hyderabad";
   smw:typeOfPlayer "BAT" .
 
-smw:PD%20Salt a smw:PlayerName;
+smw:75 a smw:Player_ID;
+  smw:hasPlayerName "PD Salt";
   smw:belongsToTeam "Royal Challengers Bengaluru";
   smw:typeOfPlayer "BAT" .
 
-smw:JM%20Sharma a smw:PlayerName;
+smw:76 a smw:Player_ID;
+  smw:hasPlayerName "JM Sharma";
   smw:belongsToTeam "Royal Challengers Bengaluru";
   smw:typeOfPlayer "BAT" .
 
-smw:KK%20Ahmed a smw:PlayerName;
+smw:77 a smw:Player_ID;
+  smw:hasPlayerName "KK Ahmed";
   smw:belongsToTeam "Chennai Super Kings";
   smw:typeOfPlayer "BOWL" .
 
-smw:TA%20Boult a smw:PlayerName;
+smw:78 a smw:Player_ID;
+  smw:hasPlayerName "TA Boult";
   smw:belongsToTeam "Mumbai Indians";
   smw:typeOfPlayer "BOWL" .
 
-smw:JR%20Hazelwood a smw:PlayerName;
+smw:79 a smw:Player_ID;
+  smw:hasPlayerName "JR Hazelwood";
   smw:belongsToTeam "Royal Challengers Bengaluru";
   smw:typeOfPlayer "BOWL" .
 
-smw:Avesh%20Khan a smw:PlayerName;
+smw:80 a smw:Player_ID;
+  smw:hasPlayerName "Avesh Khan";
   smw:belongsToTeam "Lucknow Super Giants";
   smw:typeOfPlayer "BOWL" .
 
-smw:M%20Prasidh%20Krishna a smw:PlayerName;
+smw:81 a smw:Player_ID;
+  smw:hasPlayerName "M Prasidh Krishna";
   smw:belongsToTeam "Gujarat Titans";
   smw:typeOfPlayer "BOWL" .
 
-smw:T%20Natarajan a smw:PlayerName;
+smw:82 a smw:Player_ID;
+  smw:hasPlayerName "T Natarajan";
   smw:belongsToTeam "Delhi Capitals";
   smw:typeOfPlayer "BOWL" .
 
-smw:A%20Nortje a smw:PlayerName;
+smw:83 a smw:Player_ID;
+  smw:hasPlayerName "A Nortje";
   smw:belongsToTeam "Kolkata Knight Riders";
   smw:typeOfPlayer "BOWL" .
 
-smw:Noor%20Ahmad a smw:PlayerName;
+smw:84 a smw:Player_ID;
+  smw:hasPlayerName "Noor Ahmad";
   smw:belongsToTeam "Chennai Super Kings";
   smw:typeOfPlayer "BOWL" .
 
-smw:RD%20Chahar a smw:PlayerName;
+smw:85 a smw:Player_ID;
+  smw:hasPlayerName "RD Chahar";
   smw:belongsToTeam "Sunrisers Hyderabad";
   smw:typeOfPlayer "BOWL" .
 
-smw:M%20Theekshana a smw:PlayerName;
+smw:86 a smw:Player_ID;
+  smw:hasPlayerName "PWH de Silva";
   smw:belongsToTeam "Rajasthan Royals";
   smw:typeOfPlayer "BOWL" .
 
-smw:A%20Zampa a smw:PlayerName;
-  smw:belongsToTeam "Sunrisers Hyderabad";
-  smw:typeOfPlayer "BOWL" .
-
-smw:A%20Manohar a smw:PlayerName;
-  smw:belongsToTeam "Sunrisers Hyderabad";
-  smw:typeOfPlayer "BAT" .
-
-smw:KK%20Nair a smw:PlayerName;
-  smw:belongsToTeam "Delhi Capitals";
-  smw:typeOfPlayer "BAT" .
-
-smw:A%20Raghuvanshi a smw:PlayerName;
-  smw:belongsToTeam "Kolkata Knight Riders";
-  smw:typeOfPlayer "BAT" .
-
-smw:Atharva%20Taide a smw:PlayerName;
-  smw:belongsToTeam "Sunrisers Hyderabad";
-  smw:typeOfPlayer "BAT" .
-
-smw:N%20Wadhera a smw:PlayerName;
-  smw:belongsToTeam "Punjab Kings";
-  smw:typeOfPlayer "BAT" .
-
-smw:Harpreet%20Brar a smw:PlayerName;
-  smw:belongsToTeam "Punjab Kings";
-  smw:typeOfPlayer "AR" .
-
-smw:Naman%20Dhir a smw:PlayerName;
-  smw:belongsToTeam "Mumbai Indians";
-  smw:typeOfPlayer "AR" .
-
-smw:MK%20Lomror a smw:PlayerName;
-  smw:belongsToTeam "Gujarat Titans";
-  smw:typeOfPlayer "AR" .
-
-smw:Sameer%20Rizvi a smw:PlayerName;
-  smw:belongsToTeam "Delhi Capitals";
-  smw:typeOfPlayer "AR" .
-
-smw:Abdul%20Samad a smw:PlayerName;
-  smw:belongsToTeam "Lucknow Super Giants";
-  smw:typeOfPlayer "AR" .
-
-smw:V%20Shankar a smw:PlayerName;
-  smw:belongsToTeam "Chennai Super Kings";
-  smw:typeOfPlayer "AR" .
-
-smw:Ashutosh%20Sharma a smw:PlayerName;
-  smw:belongsToTeam "Delhi Capitals";
-  smw:typeOfPlayer "AR" .
-
-smw:Nishant%20Sindhu a smw:PlayerName;
-  smw:belongsToTeam "Gujarat Titans";
-  smw:typeOfPlayer "AR" .
-
-smw:Aryan%20Juyal a smw:PlayerName;
-  smw:belongsToTeam "Lucknow Super Giants";
-  smw:typeOfPlayer "BAT" .
-
-smw:Kumar%20Kushagra a smw:PlayerName;
-  smw:belongsToTeam "Gujarat Titans";
-  smw:typeOfPlayer "BAT" .
-
-smw:Robin%20Minz a smw:PlayerName;
-  smw:belongsToTeam "Mumbai Indians";
-  smw:typeOfPlayer "BAT" .
-
-smw:Anuj%20Rawat a smw:PlayerName;
-  smw:belongsToTeam "Gujarat Titans";
-  smw:typeOfPlayer "BAT" .
-
-smw:Luvnith%20Sisodia a smw:PlayerName;
-  smw:belongsToTeam "Kolkata Knight Riders";
-  smw:typeOfPlayer "BAT" .
-
-smw:Vishnu%20Vinod a smw:PlayerName;
-  smw:belongsToTeam "Punjab Kings";
-  smw:typeOfPlayer "BAT" .
-
-smw:VG%20Arora a smw:PlayerName;
-  smw:belongsToTeam "Kolkata Knight Riders";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Rasikh%20Salam a smw:PlayerName;
-  smw:belongsToTeam "Royal Challengers Bengaluru";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Akash%20Madhwal a smw:PlayerName;
+smw:87 a smw:Player_ID;
+  smw:hasPlayerName "M Theekshana";
   smw:belongsToTeam "Rajasthan Royals";
   smw:typeOfPlayer "BOWL" .
 
-smw:MM%20Sharma a smw:PlayerName;
-  smw:belongsToTeam "Delhi Capitals";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Simarjeet%20Singh a smw:PlayerName;
+smw:88 a smw:Player_ID;
+  smw:hasPlayerName "A Zampa";
   smw:belongsToTeam "Sunrisers Hyderabad";
   smw:typeOfPlayer "BOWL" .
 
-smw:Yash%20Thakur a smw:PlayerName;
-  smw:belongsToTeam "Punjab Kings";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Vijaykumar%20Vyshak a smw:PlayerName;
-  smw:belongsToTeam "Punjab Kings";
-  smw:typeOfPlayer "BOWL" .
-
-smw:S%20Gopal a smw:PlayerName;
-  smw:belongsToTeam "Chennai Super Kings";
-  smw:typeOfPlayer "BOWL" .
-
-smw:M%20Markande a smw:PlayerName;
-  smw:belongsToTeam "Kolkata Knight Riders";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Suyash%20Sharma a smw:PlayerName;
-  smw:belongsToTeam "Royal Challengers Bengaluru";
-  smw:typeOfPlayer "BOWL" .
-
-smw:KV%20Sharma a smw:PlayerName;
-  smw:belongsToTeam "Mumbai Indians";
-  smw:typeOfPlayer "BOWL" .
-
-smw:K%20Kartikeya a smw:PlayerName;
-  smw:belongsToTeam "Rajasthan Royals";
-  smw:typeOfPlayer "BOWL" .
-
-smw:MJ%20Suthar a smw:PlayerName;
-  smw:belongsToTeam "Gujarat Titans";
-  smw:typeOfPlayer "BOWL" .
-
-smw:F%20du%20Plessis a smw:PlayerName;
-  smw:belongsToTeam "Delhi Capitals";
-  smw:typeOfPlayer "BAT" .
-
-smw:GD%20Phillips a smw:PlayerName;
-  smw:belongsToTeam "Gujarat Titans";
-  smw:typeOfPlayer "BAT" .
-
-smw:R%20Powell a smw:PlayerName;
-  smw:belongsToTeam "Kolkata Knight Riders";
-  smw:typeOfPlayer "BAT" .
-
-smw:AM%20Rahane a smw:PlayerName;
-  smw:belongsToTeam "Kolkata Knight Riders";
-  smw:typeOfPlayer "BAT" .
-
-smw:SM%20Curran a smw:PlayerName;
-  smw:belongsToTeam "Chennai Super Kings";
-  smw:typeOfPlayer "AR" .
-
-smw:M%20Jansen a smw:PlayerName;
-  smw:belongsToTeam "Punjab Kings";
-  smw:typeOfPlayer "AR" .
-
-smw:KH%20Pandya a smw:PlayerName;
-  smw:belongsToTeam "Royal Challengers Bengaluru";
-  smw:typeOfPlayer "AR" .
-
-smw:N%20Rana a smw:PlayerName;
-  smw:belongsToTeam "Rajasthan Royals";
-  smw:typeOfPlayer "AR" .
-
-smw:Washington%20Sundar a smw:PlayerName;
-  smw:belongsToTeam "Gujarat Titans";
-  smw:typeOfPlayer "AR" .
-
-smw:D%20Ferreira a smw:PlayerName;
-  smw:belongsToTeam "Delhi Capitals";
-  smw:typeOfPlayer "BAT" .
-
-smw:Josh%20Inglis a smw:PlayerName;
-  smw:belongsToTeam "Punjab Kings";
-  smw:typeOfPlayer "BAT" .
-
-smw:Ryan%20Rickelton a smw:PlayerName;
-  smw:belongsToTeam "Mumbai Indians";
-  smw:typeOfPlayer "BAT" .
-
-smw:DL%20Chahar a smw:PlayerName;
-  smw:belongsToTeam "Mumbai Indians";
-  smw:typeOfPlayer "BOWL" .
-
-smw:G%20Coetzee a smw:PlayerName;
-  smw:belongsToTeam "Gujarat Titans";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Akash%20Deep a smw:PlayerName;
-  smw:belongsToTeam "Lucknow Super Giants";
-  smw:typeOfPlayer "BOWL" .
-
-smw:TU%20Deshpande a smw:PlayerName;
-  smw:belongsToTeam "Rajasthan Royals";
-  smw:typeOfPlayer "BOWL" .
-
-smw:LH%20Ferguson a smw:PlayerName;
-  smw:belongsToTeam "Punjab Kings";
-  smw:typeOfPlayer "BOWL" .
-
-smw:B%20Kumar a smw:PlayerName;
-  smw:belongsToTeam "Royal Challengers Bengaluru";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Mukesh%20Kumar a smw:PlayerName;
-  smw:belongsToTeam "Delhi Capitals";
-  smw:typeOfPlayer "BOWL" .
-
-smw:AM%20Ghazanfar a smw:PlayerName;
-  smw:belongsToTeam "Mumbai Indians";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Swastik%20Chikara a smw:PlayerName;
-  smw:belongsToTeam "Royal Challengers Bengaluru";
-  smw:typeOfPlayer "BAT" .
-
-smw:SB%20Dubey a smw:PlayerName;
-  smw:belongsToTeam "Rajasthan Royals";
-  smw:typeOfPlayer "BAT" .
-
-smw:Shaik%20Rasheed a smw:PlayerName;
-  smw:belongsToTeam "Chennai Super Kings";
-  smw:typeOfPlayer "BAT" .
-
-smw:Himmat%20Singh a smw:PlayerName;
-  smw:belongsToTeam "Lucknow Super Giants";
-  smw:typeOfPlayer "BAT" .
-
-smw:A%20Kamboj a smw:PlayerName;
-  smw:belongsToTeam "Chennai Super Kings";
-  smw:typeOfPlayer "AR" .
-
-smw:Arshad%20Khan a smw:PlayerName;
-  smw:belongsToTeam "Gujarat Titans";
-  smw:typeOfPlayer "AR" .
-
-smw:DG%20Nalkande a smw:PlayerName;
-  smw:belongsToTeam "Delhi Capitals";
-  smw:typeOfPlayer "AR" .
-
-smw:AS%20Roy a smw:PlayerName;
-  smw:belongsToTeam "Kolkata Knight Riders";
-  smw:typeOfPlayer "AR" .
-
-smw:Swapnil%20Singh a smw:PlayerName;
-  smw:belongsToTeam "Royal Challengers Bengaluru";
-  smw:typeOfPlayer "AR" .
-
-smw:Vansh%20Bedi a smw:PlayerName;
-  smw:belongsToTeam "Chennai Super Kings";
-  smw:typeOfPlayer "BAT" .
-
-smw:Kunal%20Singh%20Rathore a smw:PlayerName;
-  smw:belongsToTeam "Rajasthan Royals";
-  smw:typeOfPlayer "BAT" .
-
-smw:Gurnoor%20Brar a smw:PlayerName;
-  smw:belongsToTeam "Gujarat Titans";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Mukesh%20Choudhary a smw:PlayerName;
-  smw:belongsToTeam "Chennai Super Kings";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Arjun%20Tendulkar a smw:PlayerName;
-  smw:belongsToTeam "Mumbai Indians";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Zeeshan%20Ansari a smw:PlayerName;
-  smw:belongsToTeam "Sunrisers Hyderabad";
-  smw:typeOfPlayer "BOWL" .
-
-smw:M%20Siddharth a smw:PlayerName;
-  smw:belongsToTeam "Lucknow Super Giants";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Digvesh%20Singh a smw:PlayerName;
-  smw:belongsToTeam "Lucknow Super Giants";
-  smw:typeOfPlayer "BOWL" .
-
-smw:MK%20Pandey a smw:PlayerName;
-  smw:belongsToTeam "Kolkata Knight Riders";
-  smw:typeOfPlayer "BAT" .
-
-smw:SE%20Rutherford a smw:PlayerName;
-  smw:belongsToTeam "Gujarat Titans";
-  smw:typeOfPlayer "BAT" .
-
-smw:Shahbaz%20Ahmed a smw:PlayerName;
-  smw:belongsToTeam "Lucknow Super Giants";
-  smw:typeOfPlayer "AR" .
-
-smw:MM%20Ali a smw:PlayerName;
-  smw:belongsToTeam "Kolkata Knight Riders";
-  smw:typeOfPlayer "AR" .
-
-smw:TH%20David a smw:PlayerName;
-  smw:belongsToTeam "Royal Challengers Bengaluru";
-  smw:typeOfPlayer "AR" .
-
-smw:DJ%20Hooda a smw:PlayerName;
-  smw:belongsToTeam "Chennai Super Kings";
-  smw:typeOfPlayer "AR" .
-
-smw:WG%20Jacks a smw:PlayerName;
-  smw:belongsToTeam "Mumbai Indians";
-  smw:typeOfPlayer "AR" .
-
-smw:Azmatullah%20Omarzai a smw:PlayerName;
-  smw:belongsToTeam "Punjab Kings";
-  smw:typeOfPlayer "AR" .
-
-smw:R%20Sai%20Kishore a smw:PlayerName;
-  smw:belongsToTeam "Gujarat Titans";
-  smw:typeOfPlayer "AR" .
-
-smw:R%20Shepherd a smw:PlayerName;
-  smw:belongsToTeam "Royal Challengers Bengaluru";
-  smw:typeOfPlayer "AR" .
-
-smw:SH%20Johnson a smw:PlayerName;
-  smw:belongsToTeam "Kolkata Knight Riders";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Umran%20Malik a smw:PlayerName;
-  smw:belongsToTeam "Kolkata Knight Riders";
-  smw:typeOfPlayer "BOWL" .
-
-smw:I%20Sharma a smw:PlayerName;
-  smw:belongsToTeam "Gujarat Titans";
-  smw:typeOfPlayer "BOWL" .
-
-smw:N%20Thushara a smw:PlayerName;
-  smw:belongsToTeam "Royal Challengers Bengaluru";
-  smw:typeOfPlayer "BOWL" .
-
-smw:JD%20Unadkat a smw:PlayerName;
-  smw:belongsToTeam "Sunrisers Hyderabad";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Sachin%20Baby a smw:PlayerName;
+smw:89 a smw:Player_ID;
+  smw:hasPlayerName "A Manohar";
   smw:belongsToTeam "Sunrisers Hyderabad";
   smw:typeOfPlayer "BAT" .
 
-smw:Harnoor%20Singh a smw:PlayerName;
+smw:90 a smw:Player_ID;
+  smw:hasPlayerName "KK Nair";
+  smw:belongsToTeam "Delhi Capitals";
+  smw:typeOfPlayer "BAT" .
+
+smw:91 a smw:Player_ID;
+  smw:hasPlayerName "A Raghuvanshi";
+  smw:belongsToTeam "Kolkata Knight Riders";
+  smw:typeOfPlayer "BAT" .
+
+smw:92 a smw:Player_ID;
+  smw:hasPlayerName "Atharva Taide";
+  smw:belongsToTeam "Sunrisers Hyderabad";
+  smw:typeOfPlayer "BAT" .
+
+smw:93 a smw:Player_ID;
+  smw:hasPlayerName "N Wadhera";
   smw:belongsToTeam "Punjab Kings";
   smw:typeOfPlayer "BAT" .
 
-smw:C%20Andre%20Siddarth a smw:PlayerName;
-  smw:belongsToTeam "Chennai Super Kings";
-  smw:typeOfPlayer "BAT" .
-
-smw:Yudhvir%20Singh a smw:PlayerName;
-  smw:belongsToTeam "Rajasthan Royals";
+smw:94 a smw:Player_ID;
+  smw:hasPlayerName "Harpreet Brar";
+  smw:belongsToTeam "Punjab Kings";
   smw:typeOfPlayer "AR" .
 
-smw:RS%20Hangargekar a smw:PlayerName;
-  smw:belongsToTeam "Lucknow Super Giants";
-  smw:typeOfPlayer "AR" .
-
-smw:AA%20Kulkarni a smw:PlayerName;
-  smw:belongsToTeam "Lucknow Super Giants";
-  smw:typeOfPlayer "AR" .
-
-smw:Ashwani%20Kumar a smw:PlayerName;
-  smw:belongsToTeam "Mumbai Indians";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Akash%20Singh a smw:PlayerName;
-  smw:belongsToTeam "Lucknow Super Giants";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Gurjapneet%20Singh a smw:PlayerName;
-  smw:belongsToTeam "Chennai Super Kings";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Matthew%20Breetzke a smw:PlayerName;
-  smw:belongsToTeam "Lucknow Super Giants";
-  smw:typeOfPlayer "BAT" .
-
-smw:MJ%20Santner a smw:PlayerName;
+smw:95 a smw:Player_ID;
+  smw:hasPlayerName "Naman Dhir";
   smw:belongsToTeam "Mumbai Indians";
   smw:typeOfPlayer "AR" .
 
-smw:J%20Yadav a smw:PlayerName;
+smw:96 a smw:Player_ID;
+  smw:hasPlayerName "MK Lomror";
   smw:belongsToTeam "Gujarat Titans";
   smw:typeOfPlayer "AR" .
 
-smw:Fazalhaq%20Farooqi a smw:PlayerName;
-  smw:belongsToTeam "Rajasthan Royals";
-  smw:typeOfPlayer "BOWL" .
-
-smw:KT%20Maphaka a smw:PlayerName;
-  smw:belongsToTeam "Rajasthan Royals";
-  smw:typeOfPlayer "BOWL" .
-
-smw:KR%20Sen a smw:PlayerName;
-  smw:belongsToTeam "Punjab Kings";
-  smw:typeOfPlayer "BOWL" .
-
-smw:RJW%20Topley a smw:PlayerName;
-  smw:belongsToTeam "Mumbai Indians";
-  smw:typeOfPlayer "BOWL" .
-
-smw:LB%20Williams a smw:PlayerName;
-  smw:belongsToTeam "Mumbai Indians";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Priyansh%20Arya a smw:PlayerName;
-  smw:belongsToTeam "Punjab Kings";
-  smw:typeOfPlayer "AR" .
-
-smw:Manoj%20Bhandage a smw:PlayerName;
-  smw:belongsToTeam "Royal Challengers Bengaluru";
-  smw:typeOfPlayer "AR" .
-
-smw:P%20Dubey a smw:PlayerName;
-  smw:belongsToTeam "Punjab Kings";
-  smw:typeOfPlayer "AR" .
-
-smw:Ajay%20Mandal a smw:PlayerName;
+smw:97 a smw:Player_ID;
+  smw:hasPlayerName "Sameer Rizvi";
   smw:belongsToTeam "Delhi Capitals";
   smw:typeOfPlayer "AR" .
 
-smw:Vipraj%20Nigam a smw:PlayerName;
-  smw:belongsToTeam "Delhi Capitals";
-  smw:typeOfPlayer "AR" .
-
-smw:Krishnan%20Shrijith a smw:PlayerName;
-  smw:belongsToTeam "Mumbai Indians";
-  smw:typeOfPlayer "BAT" .
-
-smw:Mohit%20Rathee a smw:PlayerName;
-  smw:belongsToTeam "Royal Challengers Bengaluru";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Jacob%20Bethell a smw:PlayerName;
-  smw:belongsToTeam "Royal Challengers Bengaluru";
-  smw:typeOfPlayer "AR" .
-
-smw:Brydon%20Carse a smw:PlayerName;
-  smw:belongsToTeam "Sunrisers Hyderabad";
-  smw:typeOfPlayer "AR" .
-
-smw:Aaron%20Hardie a smw:PlayerName;
-  smw:belongsToTeam "Punjab Kings";
-  smw:typeOfPlayer "AR" .
-
-smw:Kamindu%20Mendis a smw:PlayerName;
-  smw:belongsToTeam "Sunrisers Hyderabad";
-  smw:typeOfPlayer "AR" .
-
-smw:PVD%20Chameera a smw:PlayerName;
-  smw:belongsToTeam "Delhi Capitals";
-  smw:typeOfPlayer "BOWL" .
-
-smw:NT%20Ellis a smw:PlayerName;
-  smw:belongsToTeam "Chennai Super Kings";
-  smw:typeOfPlayer "BOWL" .
-
-smw:S%20Joseph a smw:PlayerName;
+smw:98 a smw:Player_ID;
+  smw:hasPlayerName "Abdul Samad";
   smw:belongsToTeam "Lucknow Super Giants";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Aniket%20Verma a smw:PlayerName;
-  smw:belongsToTeam "Sunrisers Hyderabad";
-  smw:typeOfPlayer "BAT" .
-
-smw:RA%20Bawa a smw:PlayerName;
-  smw:belongsToTeam "Mumbai Indians";
   smw:typeOfPlayer "AR" .
 
-smw:Musheer%20Khan a smw:PlayerName;
-  smw:belongsToTeam "Punjab Kings";
+smw:99 a smw:Player_ID;
+  smw:hasPlayerName "V Shankar";
+  smw:belongsToTeam "Chennai Super Kings";
   smw:typeOfPlayer "AR" .
 
-smw:Manvanth%20Kumar a smw:PlayerName;
+smw:100 a smw:Player_ID;
+  smw:hasPlayerName "Ashutosh Sharma";
   smw:belongsToTeam "Delhi Capitals";
   smw:typeOfPlayer "AR" .
 
-smw:Suryansh%20Shedge a smw:PlayerName;
-  smw:belongsToTeam "Punjab Kings";
-  smw:typeOfPlayer "AR" .
-
-smw:K%20Khejroliya a smw:PlayerName;
-  smw:belongsToTeam "Gujarat Titans";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Prince%20Yadav a smw:PlayerName;
-  smw:belongsToTeam "Lucknow Super Giants";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Jamie%20Overton a smw:PlayerName;
-  smw:belongsToTeam "Chennai Super Kings";
-  smw:typeOfPlayer "AR" .
-
-smw:Xavier%20Bartlett a smw:PlayerName;
-  smw:belongsToTeam "Punjab Kings";
-  smw:typeOfPlayer "BOWL" .
-
-smw:L%20Ngidi a smw:PlayerName;
-  smw:belongsToTeam "Royal Challengers Bengaluru";
-  smw:typeOfPlayer "BOWL" .
-
-smw:KL%20Nagarkoti a smw:PlayerName;
-  smw:belongsToTeam "Chennai Super Kings";
-  smw:typeOfPlayer "AR" .
-
-smw:Abhinandan%20Singh a smw:PlayerName;
-  smw:belongsToTeam "Royal Challengers Bengaluru";
-  smw:typeOfPlayer "BOWL" .
-
-smw:Karim%20Janat a smw:PlayerName;
+smw:101 a smw:Player_ID;
+  smw:hasPlayerName "Nishant Sindhu";
   smw:belongsToTeam "Gujarat Titans";
   smw:typeOfPlayer "AR" .
 
-smw:Pyla%20Avinash a smw:PlayerName;
+smw:102 a smw:Player_ID;
+  smw:hasPlayerName "Aryan Juyal";
+  smw:belongsToTeam "Lucknow Super Giants";
+  smw:typeOfPlayer "BAT" .
+
+smw:103 a smw:Player_ID;
+  smw:hasPlayerName "Kumar Kushagra";
+  smw:belongsToTeam "Gujarat Titans";
+  smw:typeOfPlayer "BAT" .
+
+smw:104 a smw:Player_ID;
+  smw:hasPlayerName "Robin Minz";
+  smw:belongsToTeam "Mumbai Indians";
+  smw:typeOfPlayer "BAT" .
+
+smw:105 a smw:Player_ID;
+  smw:hasPlayerName "Anuj Rawat";
+  smw:belongsToTeam "Gujarat Titans";
+  smw:typeOfPlayer "BAT" .
+
+smw:106 a smw:Player_ID;
+  smw:hasPlayerName "Luvnith Sisodia";
+  smw:belongsToTeam "Kolkata Knight Riders";
+  smw:typeOfPlayer "BAT" .
+
+smw:107 a smw:Player_ID;
+  smw:hasPlayerName "Vishnu Vinod";
   smw:belongsToTeam "Punjab Kings";
   smw:typeOfPlayer "BAT" .
 
-smw:Ramakrishna%20Ghosh a smw:PlayerName;
-  smw:belongsToTeam "Chennai Super Kings";
-  smw:typeOfPlayer "AR" .
-
-smw:Satyanarayana%20Raju a smw:PlayerName;
-  smw:belongsToTeam "Mumbai Indians";
+smw:108 a smw:Player_ID;
+  smw:hasPlayerName "VG Arora";
+  smw:belongsToTeam "Kolkata Knight Riders";
   smw:typeOfPlayer "BOWL" .
 
-smw:Bevon%20Jacobs a smw:PlayerName;
-  smw:belongsToTeam "Mumbai Indians";
-  smw:typeOfPlayer "BAT" .
+smw:109 a smw:Player_ID;
+  smw:hasPlayerName "Rasikh Salam";
+  smw:belongsToTeam "Royal Challengers Bengaluru";
+  smw:typeOfPlayer "BOWL" .
 
-smw:Ashok%20Sharma a smw:PlayerName;
+smw:110 a smw:Player_ID;
+  smw:hasPlayerName "Akash Madhwal";
   smw:belongsToTeam "Rajasthan Royals";
   smw:typeOfPlayer "BOWL" .
 
-smw:Vaibhav%20Suryavanshi a smw:PlayerName;
-  smw:belongsToTeam "Rajasthan Royals";
-  smw:typeOfPlayer "BAT" .
+smw:111 a smw:Player_ID;
+  smw:hasPlayerName "MM Sharma";
+  smw:belongsToTeam "Delhi Capitals";
+  smw:typeOfPlayer "BOWL" .
 
-smw:Eshan%20Malinga a smw:PlayerName;
+smw:112 a smw:Player_ID;
+  smw:hasPlayerName "Simarjeet Singh";
   smw:belongsToTeam "Sunrisers Hyderabad";
   smw:typeOfPlayer "BOWL" .
 
-smw:Tripurana%20Vijay a smw:PlayerName;
+smw:113 a smw:Player_ID;
+  smw:hasPlayerName "Yash Thakur";
+  smw:belongsToTeam "Punjab Kings";
+  smw:typeOfPlayer "BOWL" .
+
+smw:114 a smw:Player_ID;
+  smw:hasPlayerName "Vijaykumar Vyshak";
+  smw:belongsToTeam "Punjab Kings";
+  smw:typeOfPlayer "BOWL" .
+
+smw:115 a smw:Player_ID;
+  smw:hasPlayerName "S Gopal";
+  smw:belongsToTeam "Chennai Super Kings";
+  smw:typeOfPlayer "BOWL" .
+
+smw:116 a smw:Player_ID;
+  smw:hasPlayerName "M Markande";
+  smw:belongsToTeam "Kolkata Knight Riders";
+  smw:typeOfPlayer "BOWL" .
+
+smw:117 a smw:Player_ID;
+  smw:hasPlayerName "Suyash Sharma";
+  smw:belongsToTeam "Royal Challengers Bengaluru";
+  smw:typeOfPlayer "BOWL" .
+
+smw:118 a smw:Player_ID;
+  smw:hasPlayerName "KV Sharma";
+  smw:belongsToTeam "Mumbai Indians";
+  smw:typeOfPlayer "BOWL" .
+
+smw:119 a smw:Player_ID;
+  smw:hasPlayerName "K Kartikeya";
+  smw:belongsToTeam "Rajasthan Royals";
+  smw:typeOfPlayer "BOWL" .
+
+smw:120 a smw:Player_ID;
+  smw:hasPlayerName "MJ Suthar";
+  smw:belongsToTeam "Gujarat Titans";
+  smw:typeOfPlayer "BOWL" .
+
+smw:121 a smw:Player_ID;
+  smw:hasPlayerName "F du Plessis";
+  smw:belongsToTeam "Delhi Capitals";
+  smw:typeOfPlayer "BAT" .
+
+smw:122 a smw:Player_ID;
+  smw:hasPlayerName "GD Phillips";
+  smw:belongsToTeam "Gujarat Titans";
+  smw:typeOfPlayer "BAT" .
+
+smw:123 a smw:Player_ID;
+  smw:hasPlayerName "R Powell";
+  smw:belongsToTeam "Kolkata Knight Riders";
+  smw:typeOfPlayer "BAT" .
+
+smw:124 a smw:Player_ID;
+  smw:hasPlayerName "AM Rahane";
+  smw:belongsToTeam "Kolkata Knight Riders";
+  smw:typeOfPlayer "BAT" .
+
+smw:125 a smw:Player_ID;
+  smw:hasPlayerName "SM Curran";
+  smw:belongsToTeam "Chennai Super Kings";
+  smw:typeOfPlayer "AR" .
+
+smw:126 a smw:Player_ID;
+  smw:hasPlayerName "M Jansen";
+  smw:belongsToTeam "Punjab Kings";
+  smw:typeOfPlayer "AR" .
+
+smw:127 a smw:Player_ID;
+  smw:hasPlayerName "KH Pandya";
+  smw:belongsToTeam "Royal Challengers Bengaluru";
+  smw:typeOfPlayer "AR" .
+
+smw:128 a smw:Player_ID;
+  smw:hasPlayerName "N Rana";
+  smw:belongsToTeam "Rajasthan Royals";
+  smw:typeOfPlayer "AR" .
+
+smw:129 a smw:Player_ID;
+  smw:hasPlayerName "Washington Sundar";
+  smw:belongsToTeam "Gujarat Titans";
+  smw:typeOfPlayer "AR" .
+
+smw:130 a smw:Player_ID;
+  smw:hasPlayerName "D Ferreira";
+  smw:belongsToTeam "Delhi Capitals";
+  smw:typeOfPlayer "BAT" .
+
+smw:131 a smw:Player_ID;
+  smw:hasPlayerName "Josh Inglis";
+  smw:belongsToTeam "Punjab Kings";
+  smw:typeOfPlayer "BAT" .
+
+smw:132 a smw:Player_ID;
+  smw:hasPlayerName "Ryan Rickelton";
+  smw:belongsToTeam "Mumbai Indians";
+  smw:typeOfPlayer "BAT" .
+
+smw:133 a smw:Player_ID;
+  smw:hasPlayerName "DL Chahar";
+  smw:belongsToTeam "Mumbai Indians";
+  smw:typeOfPlayer "BOWL" .
+
+smw:134 a smw:Player_ID;
+  smw:hasPlayerName "G Coetzee";
+  smw:belongsToTeam "Gujarat Titans";
+  smw:typeOfPlayer "BOWL" .
+
+smw:135 a smw:Player_ID;
+  smw:hasPlayerName "Akash Deep";
+  smw:belongsToTeam "Lucknow Super Giants";
+  smw:typeOfPlayer "BOWL" .
+
+smw:136 a smw:Player_ID;
+  smw:hasPlayerName "TU Deshpande";
+  smw:belongsToTeam "Rajasthan Royals";
+  smw:typeOfPlayer "BOWL" .
+
+smw:137 a smw:Player_ID;
+  smw:hasPlayerName "LH Ferguson";
+  smw:belongsToTeam "Punjab Kings";
+  smw:typeOfPlayer "BOWL" .
+
+smw:138 a smw:Player_ID;
+  smw:hasPlayerName "B Kumar";
+  smw:belongsToTeam "Royal Challengers Bengaluru";
+  smw:typeOfPlayer "BOWL" .
+
+smw:139 a smw:Player_ID;
+  smw:hasPlayerName "Mukesh Kumar";
+  smw:belongsToTeam "Delhi Capitals";
+  smw:typeOfPlayer "BOWL" .
+
+smw:140 a smw:Player_ID;
+  smw:hasPlayerName "AM Ghazanfar";
+  smw:belongsToTeam "Mumbai Indians";
+  smw:typeOfPlayer "BOWL" .
+
+smw:141 a smw:Player_ID;
+  smw:hasPlayerName "Swastik Chikara";
+  smw:belongsToTeam "Royal Challengers Bengaluru";
+  smw:typeOfPlayer "BAT" .
+
+smw:142 a smw:Player_ID;
+  smw:hasPlayerName "SB Dubey";
+  smw:belongsToTeam "Rajasthan Royals";
+  smw:typeOfPlayer "BAT" .
+
+smw:143 a smw:Player_ID;
+  smw:hasPlayerName "Shaik Rasheed";
+  smw:belongsToTeam "Chennai Super Kings";
+  smw:typeOfPlayer "BAT" .
+
+smw:144 a smw:Player_ID;
+  smw:hasPlayerName "Himmat Singh";
+  smw:belongsToTeam "Lucknow Super Giants";
+  smw:typeOfPlayer "BAT" .
+
+smw:145 a smw:Player_ID;
+  smw:hasPlayerName "A Kamboj";
+  smw:belongsToTeam "Chennai Super Kings";
+  smw:typeOfPlayer "AR" .
+
+smw:146 a smw:Player_ID;
+  smw:hasPlayerName "Arshad Khan";
+  smw:belongsToTeam "Gujarat Titans";
+  smw:typeOfPlayer "AR" .
+
+smw:147 a smw:Player_ID;
+  smw:hasPlayerName "DG Nalkande";
   smw:belongsToTeam "Delhi Capitals";
   smw:typeOfPlayer "AR" .
 
-smw:Madhav%20Tiwari a smw:PlayerName;
-  smw:belongsToTeam "Delhi Capitals";
+smw:148 a smw:Player_ID;
+  smw:hasPlayerName "AS Roy";
+  smw:belongsToTeam "Kolkata Knight Riders";
   smw:typeOfPlayer "AR" .
 
-smw:Vignesh%20Puthur a smw:PlayerName;
+smw:149 a smw:Player_ID;
+  smw:hasPlayerName "Swapnil Singh";
+  smw:belongsToTeam "Royal Challengers Bengaluru";
+  smw:typeOfPlayer "AR" .
+
+smw:150 a smw:Player_ID;
+  smw:hasPlayerName "Vansh Bedi";
+  smw:belongsToTeam "Chennai Super Kings";
+  smw:typeOfPlayer "BAT" .
+
+smw:151 a smw:Player_ID;
+  smw:hasPlayerName "Kunal Singh Rathore";
+  smw:belongsToTeam "Rajasthan Royals";
+  smw:typeOfPlayer "BAT" .
+
+smw:152 a smw:Player_ID;
+  smw:hasPlayerName "Gurnoor Brar";
+  smw:belongsToTeam "Gujarat Titans";
+  smw:typeOfPlayer "BOWL" .
+
+smw:153 a smw:Player_ID;
+  smw:hasPlayerName "Mukesh Choudhary";
+  smw:belongsToTeam "Chennai Super Kings";
+  smw:typeOfPlayer "BOWL" .
+
+smw:154 a smw:Player_ID;
+  smw:hasPlayerName "Arjun Tendulkar";
+  smw:belongsToTeam "Mumbai Indians";
+  smw:typeOfPlayer "BOWL" .
+
+smw:155 a smw:Player_ID;
+  smw:hasPlayerName "Zeeshan Ansari";
+  smw:belongsToTeam "Sunrisers Hyderabad";
+  smw:typeOfPlayer "BOWL" .
+
+smw:156 a smw:Player_ID;
+  smw:hasPlayerName "M Siddharth";
+  smw:belongsToTeam "Lucknow Super Giants";
+  smw:typeOfPlayer "BOWL" .
+
+smw:157 a smw:Player_ID;
+  smw:hasPlayerName "Digvesh Singh";
+  smw:belongsToTeam "Lucknow Super Giants";
+  smw:typeOfPlayer "BOWL" .
+
+smw:158 a smw:Player_ID;
+  smw:hasPlayerName "MK Pandey";
+  smw:belongsToTeam "Kolkata Knight Riders";
+  smw:typeOfPlayer "BAT" .
+
+smw:159 a smw:Player_ID;
+  smw:hasPlayerName "SE Rutherford";
+  smw:belongsToTeam "Gujarat Titans";
+  smw:typeOfPlayer "BAT" .
+
+smw:160 a smw:Player_ID;
+  smw:hasPlayerName "Shahbaz Ahmed";
+  smw:belongsToTeam "Lucknow Super Giants";
+  smw:typeOfPlayer "AR" .
+
+smw:161 a smw:Player_ID;
+  smw:hasPlayerName "MM Ali";
+  smw:belongsToTeam "Kolkata Knight Riders";
+  smw:typeOfPlayer "AR" .
+
+smw:162 a smw:Player_ID;
+  smw:hasPlayerName "TH David";
+  smw:belongsToTeam "Royal Challengers Bengaluru";
+  smw:typeOfPlayer "AR" .
+
+smw:163 a smw:Player_ID;
+  smw:hasPlayerName "DJ Hooda";
+  smw:belongsToTeam "Chennai Super Kings";
+  smw:typeOfPlayer "AR" .
+
+smw:164 a smw:Player_ID;
+  smw:hasPlayerName "WG Jacks";
   smw:belongsToTeam "Mumbai Indians";
   smw:typeOfPlayer "AR" .
 
-smw:JC%20Archer a smw:PlayerName;
+smw:165 a smw:Player_ID;
+  smw:hasPlayerName "Azmatullah Omarzai";
+  smw:belongsToTeam "Punjab Kings";
+  smw:typeOfPlayer "AR" .
+
+smw:166 a smw:Player_ID;
+  smw:hasPlayerName "R Sai Kishore";
+  smw:belongsToTeam "Gujarat Titans";
+  smw:typeOfPlayer "AR" .
+
+smw:167 a smw:Player_ID;
+  smw:hasPlayerName "R Shepherd";
+  smw:belongsToTeam "Royal Challengers Bengaluru";
+  smw:typeOfPlayer "AR" .
+
+smw:168 a smw:Player_ID;
+  smw:hasPlayerName "SH Johnson";
+  smw:belongsToTeam "Kolkata Knight Riders";
+  smw:typeOfPlayer "BOWL" .
+
+smw:169 a smw:Player_ID;
+  smw:hasPlayerName "Umran Malik";
+  smw:belongsToTeam "Kolkata Knight Riders";
+  smw:typeOfPlayer "BOWL" .
+
+smw:170 a smw:Player_ID;
+  smw:hasPlayerName "I Sharma";
+  smw:belongsToTeam "Gujarat Titans";
+  smw:typeOfPlayer "BOWL" .
+
+smw:171 a smw:Player_ID;
+  smw:hasPlayerName "N Thushara";
+  smw:belongsToTeam "Royal Challengers Bengaluru";
+  smw:typeOfPlayer "BOWL" .
+
+smw:172 a smw:Player_ID;
+  smw:hasPlayerName "JD Unadkat";
+  smw:belongsToTeam "Sunrisers Hyderabad";
+  smw:typeOfPlayer "BOWL" .
+
+smw:173 a smw:Player_ID;
+  smw:hasPlayerName "Sachin Baby";
+  smw:belongsToTeam "Sunrisers Hyderabad";
+  smw:typeOfPlayer "BAT" .
+
+smw:174 a smw:Player_ID;
+  smw:hasPlayerName "Harnoor Singh";
+  smw:belongsToTeam "Punjab Kings";
+  smw:typeOfPlayer "BAT" .
+
+smw:175 a smw:Player_ID;
+  smw:hasPlayerName "C Andre Siddarth";
+  smw:belongsToTeam "Chennai Super Kings";
+  smw:typeOfPlayer "BAT" .
+
+smw:176 a smw:Player_ID;
+  smw:hasPlayerName "Yudhvir Singh";
+  smw:belongsToTeam "Rajasthan Royals";
+  smw:typeOfPlayer "AR" .
+
+smw:177 a smw:Player_ID;
+  smw:hasPlayerName "RS Hangargekar";
+  smw:belongsToTeam "Lucknow Super Giants";
+  smw:typeOfPlayer "AR" .
+
+smw:178 a smw:Player_ID;
+  smw:hasPlayerName "AA Kulkarni";
+  smw:belongsToTeam "Lucknow Super Giants";
+  smw:typeOfPlayer "AR" .
+
+smw:179 a smw:Player_ID;
+  smw:hasPlayerName "Ashwani Kumar";
+  smw:belongsToTeam "Mumbai Indians";
+  smw:typeOfPlayer "BOWL" .
+
+smw:180 a smw:Player_ID;
+  smw:hasPlayerName "Akash Singh";
+  smw:belongsToTeam "Lucknow Super Giants";
+  smw:typeOfPlayer "BOWL" .
+
+smw:181 a smw:Player_ID;
+  smw:hasPlayerName "Gurjapneet Singh";
+  smw:belongsToTeam "Chennai Super Kings";
+  smw:typeOfPlayer "BOWL" .
+
+smw:182 a smw:Player_ID;
+  smw:hasPlayerName "Matthew Breetzke";
+  smw:belongsToTeam "Lucknow Super Giants";
+  smw:typeOfPlayer "BAT" .
+
+smw:183 a smw:Player_ID;
+  smw:hasPlayerName "MJ Santner";
+  smw:belongsToTeam "Mumbai Indians";
+  smw:typeOfPlayer "AR" .
+
+smw:184 a smw:Player_ID;
+  smw:hasPlayerName "J Yadav";
+  smw:belongsToTeam "Gujarat Titans";
+  smw:typeOfPlayer "AR" .
+
+smw:185 a smw:Player_ID;
+  smw:hasPlayerName "Fazalhaq Farooqi";
+  smw:belongsToTeam "Rajasthan Royals";
+  smw:typeOfPlayer "BOWL" .
+
+smw:186 a smw:Player_ID;
+  smw:hasPlayerName "KT Maphaka";
+  smw:belongsToTeam "Rajasthan Royals";
+  smw:typeOfPlayer "BOWL" .
+
+smw:187 a smw:Player_ID;
+  smw:hasPlayerName "KR Sen";
+  smw:belongsToTeam "Punjab Kings";
+  smw:typeOfPlayer "BOWL" .
+
+smw:188 a smw:Player_ID;
+  smw:hasPlayerName "RJW Topley";
+  smw:belongsToTeam "Mumbai Indians";
+  smw:typeOfPlayer "BOWL" .
+
+smw:189 a smw:Player_ID;
+  smw:hasPlayerName "LB Williams";
+  smw:belongsToTeam "Mumbai Indians";
+  smw:typeOfPlayer "BOWL" .
+
+smw:190 a smw:Player_ID;
+  smw:hasPlayerName "Priyansh Arya";
+  smw:belongsToTeam "Punjab Kings";
+  smw:typeOfPlayer "AR" .
+
+smw:191 a smw:Player_ID;
+  smw:hasPlayerName "Manoj Bhandage";
+  smw:belongsToTeam "Royal Challengers Bengaluru";
+  smw:typeOfPlayer "AR" .
+
+smw:192 a smw:Player_ID;
+  smw:hasPlayerName "P Dubey";
+  smw:belongsToTeam "Punjab Kings";
+  smw:typeOfPlayer "AR" .
+
+smw:193 a smw:Player_ID;
+  smw:hasPlayerName "Ajay Mandal";
+  smw:belongsToTeam "Delhi Capitals";
+  smw:typeOfPlayer "AR" .
+
+smw:194 a smw:Player_ID;
+  smw:hasPlayerName "Vipraj Nigam";
+  smw:belongsToTeam "Delhi Capitals";
+  smw:typeOfPlayer "AR" .
+
+smw:195 a smw:Player_ID;
+  smw:hasPlayerName "Krishnan Shrijith";
+  smw:belongsToTeam "Mumbai Indians";
+  smw:typeOfPlayer "BAT" .
+
+smw:196 a smw:Player_ID;
+  smw:hasPlayerName "Mohit Rathee";
+  smw:belongsToTeam "Royal Challengers Bengaluru";
+  smw:typeOfPlayer "BOWL" .
+
+smw:197 a smw:Player_ID;
+  smw:hasPlayerName "Jacob Bethell";
+  smw:belongsToTeam "Royal Challengers Bengaluru";
+  smw:typeOfPlayer "AR" .
+
+smw:198 a smw:Player_ID;
+  smw:hasPlayerName "Brydon Carse";
+  smw:belongsToTeam "Sunrisers Hyderabad";
+  smw:typeOfPlayer "AR" .
+
+smw:199 a smw:Player_ID;
+  smw:hasPlayerName "Aaron Hardie";
+  smw:belongsToTeam "Punjab Kings";
+  smw:typeOfPlayer "AR" .
+
+smw:200 a smw:Player_ID;
+  smw:hasPlayerName "Kamindu Mendis";
+  smw:belongsToTeam "Sunrisers Hyderabad";
+  smw:typeOfPlayer "AR" .
+
+smw:201 a smw:Player_ID;
+  smw:hasPlayerName "PVD Chameera";
+  smw:belongsToTeam "Delhi Capitals";
+  smw:typeOfPlayer "BOWL" .
+
+smw:202 a smw:Player_ID;
+  smw:hasPlayerName "NT Ellis";
+  smw:belongsToTeam "Chennai Super Kings";
+  smw:typeOfPlayer "BOWL" .
+
+smw:203 a smw:Player_ID;
+  smw:hasPlayerName "S Joseph";
+  smw:belongsToTeam "Lucknow Super Giants";
+  smw:typeOfPlayer "BOWL" .
+
+smw:204 a smw:Player_ID;
+  smw:hasPlayerName "Aniket Verma";
+  smw:belongsToTeam "Sunrisers Hyderabad";
+  smw:typeOfPlayer "BAT" .
+
+smw:205 a smw:Player_ID;
+  smw:hasPlayerName "RA Bawa";
+  smw:belongsToTeam "Mumbai Indians";
+  smw:typeOfPlayer "AR" .
+
+smw:206 a smw:Player_ID;
+  smw:hasPlayerName "Musheer Khan";
+  smw:belongsToTeam "Punjab Kings";
+  smw:typeOfPlayer "AR" .
+
+smw:207 a smw:Player_ID;
+  smw:hasPlayerName "Manvanth Kumar";
+  smw:belongsToTeam "Delhi Capitals";
+  smw:typeOfPlayer "AR" .
+
+smw:208 a smw:Player_ID;
+  smw:hasPlayerName "Suryansh Shedge";
+  smw:belongsToTeam "Punjab Kings";
+  smw:typeOfPlayer "AR" .
+
+smw:209 a smw:Player_ID;
+  smw:hasPlayerName "K Khejroliya";
+  smw:belongsToTeam "Gujarat Titans";
+  smw:typeOfPlayer "BOWL" .
+
+smw:210 a smw:Player_ID;
+  smw:hasPlayerName "Prince Yadav";
+  smw:belongsToTeam "Lucknow Super Giants";
+  smw:typeOfPlayer "BOWL" .
+
+smw:211 a smw:Player_ID;
+  smw:hasPlayerName "Jamie Overton";
+  smw:belongsToTeam "Chennai Super Kings";
+  smw:typeOfPlayer "AR" .
+
+smw:212 a smw:Player_ID;
+  smw:hasPlayerName "Xavier Bartlett";
+  smw:belongsToTeam "Punjab Kings";
+  smw:typeOfPlayer "BOWL" .
+
+smw:213 a smw:Player_ID;
+  smw:hasPlayerName "L Ngidi";
+  smw:belongsToTeam "Royal Challengers Bengaluru";
+  smw:typeOfPlayer "BOWL" .
+
+smw:214 a smw:Player_ID;
+  smw:hasPlayerName "KL Nagarkoti";
+  smw:belongsToTeam "Chennai Super Kings";
+  smw:typeOfPlayer "AR" .
+
+smw:215 a smw:Player_ID;
+  smw:hasPlayerName "Abhinandan Singh";
+  smw:belongsToTeam "Royal Challengers Bengaluru";
+  smw:typeOfPlayer "BOWL" .
+
+smw:216 a smw:Player_ID;
+  smw:hasPlayerName "Karim Janat";
+  smw:belongsToTeam "Gujarat Titans";
+  smw:typeOfPlayer "AR" .
+
+smw:217 a smw:Player_ID;
+  smw:hasPlayerName "Pyla Avinash";
+  smw:belongsToTeam "Punjab Kings";
+  smw:typeOfPlayer "BAT" .
+
+smw:218 a smw:Player_ID;
+  smw:hasPlayerName "Ramakrishna Ghosh";
+  smw:belongsToTeam "Chennai Super Kings";
+  smw:typeOfPlayer "AR" .
+
+smw:219 a smw:Player_ID;
+  smw:hasPlayerName "Satyanarayana Raju";
+  smw:belongsToTeam "Mumbai Indians";
+  smw:typeOfPlayer "BOWL" .
+
+smw:220 a smw:Player_ID;
+  smw:hasPlayerName "Bevon Jacobs";
+  smw:belongsToTeam "Mumbai Indians";
+  smw:typeOfPlayer "BAT" .
+
+smw:221 a smw:Player_ID;
+  smw:hasPlayerName "Ashok Sharma";
+  smw:belongsToTeam "Rajasthan Royals";
+  smw:typeOfPlayer "BOWL" .
+
+smw:222 a smw:Player_ID;
+  smw:hasPlayerName "Vaibhav Suryavanshi";
+  smw:belongsToTeam "Rajasthan Royals";
+  smw:typeOfPlayer "BAT" .
+
+smw:223 a smw:Player_ID;
+  smw:hasPlayerName "Eshan Malinga";
+  smw:belongsToTeam "Sunrisers Hyderabad";
+  smw:typeOfPlayer "BOWL" .
+
+smw:224 a smw:Player_ID;
+  smw:hasPlayerName "Tripurana Vijay";
+  smw:belongsToTeam "Delhi Capitals";
+  smw:typeOfPlayer "AR" .
+
+smw:225 a smw:Player_ID;
+  smw:hasPlayerName "Madhav Tiwari";
+  smw:belongsToTeam "Delhi Capitals";
+  smw:typeOfPlayer "AR" .
+
+smw:226 a smw:Player_ID;
+  smw:hasPlayerName "Vignesh Puthur";
+  smw:belongsToTeam "Mumbai Indians";
+  smw:typeOfPlayer "AR" .
+
+smw:227 a smw:Player_ID;
+  smw:hasPlayerName "JC Archer";
   smw:belongsToTeam "Rajasthan Royals";
   smw:typeOfPlayer "BOWL" .
