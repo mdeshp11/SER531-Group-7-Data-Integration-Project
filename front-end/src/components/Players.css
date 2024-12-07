@@ -1,0 +1,154 @@
+.players-page {
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    background: url("/Users/nishaverma/Desktop/SER531/SER531-Group-7-Data-Integration-Project/front-end/public/cricket-stadium.jpg") no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Header styling */
+  .player-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffd700;
+    margin-bottom: 40px; /* Adjust margin for better spacing */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Dropdown container */
+  .dropdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Add spacing between dropdowns */
+    margin-bottom: 20px;
+  }
+  
+  /* Dropdown styling */
+  .team-dropdown {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ffd700;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    width: 250px; /* Reduced width for better fit */
+    text-align: center;
+  }
+  
+  .team-dropdown:hover {
+    border-color: #ffa500; /* Orange on hover */
+  }
+  
+  .team-dropdown:focus {
+    outline: none;
+    box-shadow: 0 0 10px #ffa500;
+  }
+  
+  /* Search bar styling */
+  .search-container {
+    margin-bottom: 20px;
+  }
+  
+  .search-input {
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;
+    max-width: 400px; /* Limit search bar width */
+    border: 2px solid #ffd700;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    outline: none;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+  }
+  
+  .search-input::placeholder {
+    color: gray;
+    opacity: 0.8;
+  }
+  
+  .search-input:focus {
+    border-color: #ffa500;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.8);
+  }
+  
+  /* Players container */
+  .players-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Section styling */
+  .section {
+    width: 90%;
+    max-width: 900px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Table styling */
+  .players-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .players-table th,
+  .players-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    color: white;
+  }
+  
+  .players-table th {
+    background-color: #ffd700;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .players-table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1); /* Alternate row color */
+  }
+  
+  .players-table tr:hover {
+    background-color: rgba(255, 215, 0, 0.3); /* Highlight row on hover */
+    cursor: pointer;
+  }
+
+  /* Updated table container for better visibility */
+.table-backdrop {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark backdrop */
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Adjust table on small screens */
+  @media (max-width: 768px) {
+    .players-table th,
+    .players-table td {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .team-dropdown {
+      width: 200px;
+    }
+  
+    .search-input {
+      width: 90%;
+    }
+  }
+  
