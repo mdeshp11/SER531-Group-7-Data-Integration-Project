@@ -1,47 +1,125 @@
 .player-dismissal-container {
     font-family: Arial, sans-serif;
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .header {
+    color: white;
     text-align: center;
-    color: #333;
-  }
-  
-  .search-bar-container {
+    background: url("/public/cricket-stadium.jpg") no-repeat center center;
+    background-size: cover; /* Ensure the image covers the container */
+    min-height: 100vh; /* Full viewport height */
+    padding: 20px;
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+}
+
+.header {
+    text-align: center;
+    color: #ffd700; /* Golden color for contrast */
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.search-bar-container {
     margin: 20px 0;
     text-align: center;
-  }
-  
-  .search-bar {
+    max-width: 600px;
+}
+
+.search-bar {
     width: 80%;
+    max-width: 600px;
     padding: 10px;
     font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .player-stats {
-    margin-top: 20px;
-  }
-  
-  .player-stats ul {
+    border-radius: 30px;
+    border: 1px solid #ffd700;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for input */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    color: black; /* Adjust text color */
+}
+
+.search-bar:focus {
+    border-color: #ffd700;
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2); /* Golden shadow on focus */
+    outline: none;
+}
+
+.player-stats {
+    background: rgba(0, 0, 0, 0.75); /* Dark overlay */
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 10px; /* Add spacing from dropdown */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    
+}
+
+.player-stats h2 {
+    text-align: center;
+    color: #ffd700;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.player-stats ul {
     list-style-type: none;
     padding: 0;
-  }
-  
-  .player-stats li {
-    padding: 5px 0;
-  }
-  
-  .player-stats strong {
-    color: #007BFF;
-  }
-  
-  p {
+    margin: 0;
+}
+
+.player-stats li {
+    padding: 10px 0;
+    font-size: 1rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.player-stats li:last-child {
+    border-bottom: none;
+}
+
+.player-stats strong {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+p {
     text-align: center;
-    color: #777;
-  }
-  
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+/* Add hover effect for search results */
+.player-stats li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .player-dismissal-container {
+        padding: 15px;
+    }
+
+    .header {
+        font-size: 1.5rem;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .player-stats li {
+        font-size: 0.9rem;
+    }
+}

@@ -2,7 +2,7 @@
     font-family: Arial, sans-serif;
     color: white;
     text-align: center;
-    background: url("/Users/nishaverma/Desktop/SER531/SER531-Group-7-Data-Integration-Project/front-end/public/cricket-stadium.jpg") no-repeat center center;
+    background: url("/public/cricket-stadium.jpg") no-repeat center center;
     background-size: cover;
     min-height: 100vh;
     padding: 20px;

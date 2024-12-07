@@ -45,6 +45,7 @@ function PlayerDismissal() {
   };
 
   return (
+    <div className="players-page">
     <div className="player-dismissal-container">
       <h1 className="header">Player Dismissal Stats</h1>
       
@@ -76,6 +77,7 @@ function PlayerDismissal() {
       ) : (
         <p>Please search for a player</p>
       )}
+    </div>
     </div>
   );
 }
