@@ -1,166 +1,105 @@
 /* Main container styling */
 .team-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh;
-    background-image: url("/Users/nishaverma/Desktop/SER531/SER531-Group-7-Data-Integration-Project/front-end/public/cricket-stadium.jpg"); /* Replace with your image path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    color: white;
-    padding: 20px;
-    padding-top: 50px;
-  }
-  
-  /* Header styling */
-  .team-header {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 50px;
-    color: #ffd700; /* Gold color */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  }
-  
-  /* Dropdown container styling */
-  .dropdown-container {
-    margin-bottom: 20px;
-  }
-  
-  .team-select {
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 2px solid #ffd700;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #000;
-    cursor: pointer;
-    width: 100%;
-    text-align: center;
-    transition: border-color 0.6s ease;
-  }
-  
-  .team-select:hover {
-    border-color: #ffa500;
-  }
-  
-  .team-select:focus {
-    outline: none;
-    box-shadow: 0 0 10px #ffa500;
-  }
-  
-  /* Stats container styling */
-  .stats-container {
-    background: rgba(0, 0, 0, 0.75);
-    padding: 20px;
-    border-radius: 12px;
-    width: 500px;
-    text-align: center;
-    color: white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    margin-top: 20px;
-  }
-  
-  .chart-container {
-    width: 90%;
-    max-width: 600px;
-    height: 360px;
-    margin: 20px auto;
-    padding: 10px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  
-  .team-name {
-    font-size: 1.8rem;
-    color: #ffd700;
-    margin-bottom: 20px;
-  }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  background-image: url("/public/cricket-stadium.jpg"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: white;
+  padding: 20px;
+  padding-top: 50px;
+}
 
+/* Header styling */
+.team-header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: #ffd700; /* Gold color */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Dropdown container styling */
+.dropdown-container {
+  margin-bottom: 20px;
+}
+
+.team-select {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #ffd700;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: border-color 0.6s ease;
+}
+
+.team-select:hover {
+  border-color: #ffa500;
+}
+
+.team-select:focus {
+  outline: none;
+  box-shadow: 0 0 10px #ffa500;
+}
+
+/* Stats container styling */
+.stats-container {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 20px;
+  border-radius: 12px;
+  width: 350px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
+
+/* Chart container styling */
+.chart-container {
+  width: 100%;
+  max-width: 600px;
+  height: 360px;
+  padding-bottom: 40px;
+  margin: auto;
+}
+
+.team-name {
+  font-size: 1.8rem;
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+
+/* Animation for the team logo */
 .team-logo {
-    position: absolute;
-    top: -150px; /* Start slightly outside the viewport */
-    left: 130px; /* Adjust to make it closer to the bottom left */
-    width: 200px;
-    height: auto; /* Maintain aspect ratio */
-    animation: dropLogo 1.5s ease-out forwards;
-    z-index: 1; /* Keep it behind other elements */
+  position: fixed;
+  top: -100px; /* Start outside the viewport */
+  left: 130px; /* Bottom left corner */
+  width: 200px;
+  height: 200px;
+  animation: dropLogo 2s ease-in-out forwards;
+  z-index: 100;
+}
+
+/* Define the drop animation */
+@keyframes dropLogo {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
   }
-  @keyframes dropLogo {
-    0% {
-      transform: translateY(0);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(750px); /* Adjust based on your layout */
-      opacity: 1;
-    }
+  100% {
+    transform: translateY(600px); /* Adjust based on the desired final position */
+    opacity: 1;
   }
-  
-  
-  /* Style for the text container */
-.average-score {
-    font-size: 1.8rem; /* Adjust overall font size */
-    font-weight: bold;
-    color: #ffffff; /* Fallback color for text */
-    margin-top: 20px;
-    background: linear-gradient(90deg, #32cd32, #ffd700); /* Gradient colors */
-    background-clip: text; /* Clip the gradient to the text */
-    -webkit-text-fill-color: transparent; /* Transparent fill for gradient effect */
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Vertically align items */
-    justify-content: center; /* Center-align text and icon */
-    overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  }
-  
-  /* Style for the batting icon in inline layout */
-.batting-icon-inline {
-    width: 20px; /* Adjust size */
-    height: auto; /* Maintain aspect ratio */
-    vertical-align: middle; /* Align with text */
-    margin-right: 8px; /* Add space between the icon and text */
-  }
-  
-  /* Style for the label (icon + text) */
-  .batting-label {
-    font-size: 1.5rem; /* Adjust label text size */
-    font-weight: bold;
-    margin-right: 10px; /* Add space between icon and score */
-    display: flex; /* Align icon and text together */
-    align-items: center;
-    background: linear-gradient(90deg, #32cd32, #ffd700); /* Gradient */
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    white-space: nowrap;
-  }
-  
-  /* Style for the batting icon */
-.batting-icon-custom {
-    width: 24px; /* Adjust icon size */
-    height: auto; /* Maintain aspect ratio */
-    vertical-align: middle; /* Align icon vertically with text */
-    margin-right: 10px; /* Space between icon and text */
-    position: relative;
-    top: -2px; /* Adjust vertical positioning of the icon */
-  }
-  
-  /* Style for the score text */
-  .batting-score {
-    font-size: 2rem; /* Emphasize the score */
-    font-weight: bold;
-    background: linear-gradient(90deg, #ffd700, #ff4500); /* Gold to orange gradient */
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-left: 5px; /* Add spacing between label and score */
-    white-space: nowrap;
-  }
-  
+}
+

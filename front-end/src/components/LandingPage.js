@@ -25,8 +25,8 @@ function LandingPage() {
           <button onClick={() => navigate("/feature3")} className="feature-btn">
             Feature 3
           </button>
-          <button onClick={() => navigate("/feature4")} className="feature-btn">
-            Feature 4
+          <button onClick={() => navigate("/dismissal")} className="feature-btn">
+            Player Dismissal
           </button>
         </div>
       </div>

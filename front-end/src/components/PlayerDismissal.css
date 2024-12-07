@@ -1,0 +1,47 @@
+.player-dismissal-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    text-align: center;
+    color: #333;
+  }
+  
+  .search-bar-container {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .search-bar {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .player-stats {
+    margin-top: 20px;
+  }
+  
+  .player-stats ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .player-stats li {
+    padding: 5px 0;
+  }
+  
+  .player-stats strong {
+    color: #007BFF;
+  }
+  
+  p {
+    text-align: center;
+    color: #777;
+  }
+  

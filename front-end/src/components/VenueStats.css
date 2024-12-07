@@ -8,7 +8,7 @@
     color: white;
     font-family: Arial, sans-serif;
     height: 100vh;
-    background-image: url("/Users/nishaverma/Desktop/SER531/SER531-Group-7-Data-Integration-Project/front-end/public/cricket-stadium.jpg"); /* Replace with your image path */
+    background-image: url("/public/cricket-stadium.jpg"); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

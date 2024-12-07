@@ -1,5 +1,5 @@
-import React, { useState, /*useEffect */} from "react";
-// import axios from "axios";
+import React, { useState, useEffect} from "react";
+import axios from "axios";
 import { Pie } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -13,51 +13,51 @@ import "./VenueStats.css"; // Import the CSS file
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 //BACKEND URL
-// const backendURL = 'http://127.0.0.1:5050'
+const backendURL = 'http://127.0.0.1:5050'
 
-const sampleVenueData = [
-  {
-    battingFirstWinPercentage: 53.333333333333336,
-    battingFirstWins: 16,
-    bowlingFirstWinPercentage: 43.333333333333336,
-    bowlingFirstWins: 13,
-    stadium: "Arun Jaitley Stadium",
-    totalMatches: 30,
-  },
-  {
-    battingFirstWinPercentage: 57.142857142857146,
-    battingFirstWins: 4,
-    bowlingFirstWinPercentage: 42.857142857142854,
-    bowlingFirstWins: 3,
-    stadium: "Barabati Stadium",
-    totalMatches: 7,
-  },
-];
+// const sampleVenueData = [
+//   {
+//     battingFirstWinPercentage: 53.333333333333336,
+//     battingFirstWins: 16,
+//     bowlingFirstWinPercentage: 43.333333333333336,
+//     bowlingFirstWins: 13,
+//     stadium: "Arun Jaitley Stadium",
+//     totalMatches: 30,
+//   },
+//   {
+//     battingFirstWinPercentage: 57.142857142857146,
+//     battingFirstWins: 4,
+//     bowlingFirstWinPercentage: 42.857142857142854,
+//     bowlingFirstWins: 3,
+//     stadium: "Barabati Stadium",
+//     totalMatches: 7,
+//   },
+// ];
 
 function VenueStats() {
-  const [venues] = useState(sampleVenueData); // Ensure this is properly used
-  // const [venues, setVenues] = useState([]); // State to store venue data from API
+  // const [venues] = useState(sampleVenueData); // Ensure this is properly used
+  const [venues, setVenues] = useState([]); // State to store venue data from API
   const [selectedVenue, setSelectedVenue] = useState(null);
 
   // Fetch data from API on component mount
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await axios.get(backendURL + '/api/ipl_server');
-  //       if (response.data.error) {
-  //         console.error("Backend Error:", response.data.error);
-  //         return;
-  //       }
-  //       console.log("API Response:", response.data);
-  //       setVenues(response.data);
-  //     } catch (error) {
-  //       console.error("Error fetching data from API:", error.message);
-  //     }
-  //   };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(backendURL + '/api/ipl_server');
+        if (response.data.error) {
+          console.error("Backend Error:", response.data.error);
+          return;
+        }
+        console.log("API Response:", response.data);
+        setVenues(response.data);
+      } catch (error) {
+        console.error("Error fetching data from API:", error.message);
+      }
+    };
     
 
-  //   fetchData();
-  // }, []);
+    fetchData();
+  }, []);
 
   const handleVenueChange = (event) => {
     const venueName = event.target.value;
