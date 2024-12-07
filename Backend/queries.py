@@ -21,17 +21,17 @@ venue_stats = """
     ORDER BY ?stadium
     """
 
-batting_first = """
-    PREFIX smw: <http://example.org/ipl/1.0.0/matches#>
-    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+# batting_first = """
+#     PREFIX smw: <http://example.org/ipl/1.0.0/matches#>
+#     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-    SELECT ?team ?battingFirstRuns
-    WHERE {
-        ?match smw:tossDecision "bat" ;
-        smw:tossWinner ?team ;
-        smw:targetRuns ?battingFirstRuns .
-    }
-    """
+#     SELECT ?team ?battingFirstRuns
+#     WHERE {
+#         ?match smw:tossDecision "bat" ;
+#         smw:tossWinner ?team ;
+#         smw:targetRuns ?battingFirstRuns .
+#     }
+#     """
 
 bowling_first = """
     PREFIX smw: <http://example.org/ipl/1.0.0/matches#>
@@ -197,3 +197,55 @@ clutch_fielder = """
 #    GROUP BY ?team
 #    ORDER BY DESC(?averageScoreBattingFirst)
 #       """
+
+batting_first = """
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+    PREFIX smw: <http://example.org/ipl/1.0.0/matches#>
+   
+    SELECT ?team (ROUND(AVG(?adjustedTargetRuns)) AS ?averageScoreBattingFirst)
+    WHERE {
+        {
+        # Case 1: Team wins the toss and chooses to bat
+        ?match smw:tossWinner ?team;
+                smw:tossDecision "bat";
+                smw:targetRuns ?targetRuns.
+        FILTER(?targetRuns != "NA") # Exclude cases where targetRuns is "NA"
+        BIND(xsd:integer(?targetRuns) - 1 AS ?adjustedTargetRuns)
+        }
+        UNION
+        {
+        # Case 2: Team loses the toss but bats first
+        ?match smw:hasTeam1 ?team;
+                smw:tossWinner ?opponent;
+                smw:tossDecision "field";
+                smw:targetRuns ?targetRuns.
+        FILTER(?targetRuns != "NA") 
+        FILTER(?team != ?opponent) 
+        BIND(xsd:integer(?targetRuns) - 1 AS ?adjustedTargetRuns)
+        }
+    }
+    GROUP BY ?team
+    ORDER BY DESC(?averageScoreBattingFirst)
+"""
+player_dismissal = """
+    PREFIX smw: <http://example.org/ipl/1.0.0/matches#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+    SELECT ?player_dismissed ?teamName ?dismissalKind (COUNT(?delivery) AS ?dismissalCount)
+    WHERE {
+    # Retrieve player dismissal details
+    ?delivery smw:hasPlayerDismissed ?player_dismissed ;
+                smw:isWicket true ;
+                smw:overNumber ?over ;
+                smw:wasDeliveredIn ?match ;
+                smw:dismissalKind ?dismissalKind .
+            
+    # Fetch team name for the dismissed player
+    ?player smw:hasPlayerName ?player_dismissed ;
+            smw:belongsToTeam ?teamName .
+    }
+    GROUP BY ?player_dismissed ?teamName ?dismissalKind
+    ORDER BY ?player_dismissed DESC(?dismissalCount)
+"""

@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 import requests
 import os
-from queries import venue_stats, bowling_first, batting_first, clutch_bowler, clutch_batsman, clutch_fielder
+from queries import venue_stats, bowling_first, batting_first, clutch_bowler, clutch_batsman, clutch_fielder, player_dismissal
 
 app = Flask(__name__)
 CORS(app, origins='*')
@@ -49,10 +49,10 @@ def venue_statistics():
 @app.route('/api/ipl_server/team_stats', methods=['GET'])
 def team_stats():
     # Fetch bowling stats
-    print('Bowling: ', get_bowling_stats())
-    bowling_stats = get_bowling_stats()
-    if "error" in bowling_stats:
-        return jsonify({"bowl_error": bowling_stats["error"]}), 400
+    # print('Bowling: ', get_bowling_stats())
+    # bowling_stats = get_bowling_stats()
+    # if "error" in bowling_stats:
+    #     return jsonify({"bowl_error": bowling_stats["error"]}), 400
 
     # Fetch batting stats
     # print('Batting: ', get_batting_stats())
@@ -62,14 +62,19 @@ def team_stats():
 
     # Merge bowling and batting stats
     formatted_data = {}
-    all_teams = set(bowling_stats.keys()).union(batting_stats.keys())
+    # all_teams = set(bowling_stats.keys()).union(batting_stats.keys())
 
     # print('ALL_teams: ', all_teams)
 
-    for team in all_teams:
+    # for team in all_teams:
+    #     formatted_data[team] = {
+    #         "battingSecondAverage": bowling_stats.get(team, 0),  
+    #         "battingFirstAverage": batting_stats.get(team, 0)
+    #     }
+
+    for team, batting_first_average in batting_stats.items():
         formatted_data[team] = {
-            "battingSecondAverage": bowling_stats.get(team, 0),  
-            "battingFirstAverage": batting_stats.get(team, 0)
+            "averageScoreBattingFirst": batting_first_average
         }
 
     return jsonify(formatted_data)
@@ -95,7 +100,7 @@ def get_batting_stats():
     batting_data = {}
     for binding in result.get("results", {}).get("bindings", []):
         team = binding["team"]["value"]
-        batting_data[team] = binding["battingFirstRuns"]["value"]
+        batting_data[team] = binding["averageScoreBattingFirst"]["value"]
     return batting_data
 
 # clutch players API
@@ -209,6 +214,27 @@ def clutch_fielders():
         })
        
     return formatted_fielders
+
+# Player Dismissal API
+@app.route('/api/ipl_server/player_dismissals', methods=['GET'])
+def player_dismissals():
+    result = execute_sparql_query(player_dismissal)
+    if "error" in result:
+       return {"error:", result["error"]}
+    
+    player_data = {}
+
+    for binding in result.get("results", {}).get("bindings", []):
+        player = binding["player_dismissed"]["value"]
+        dismissalKind = binding["dismissalKind"]["value"]
+        dismissalCount = int(binding["dismissalCount"]["value"])
+
+        if player not in player_data:
+            player_data[player] = {}
+
+        player_data[player][dismissalKind] = dismissalCount
+
+    return player_data
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5050, debug=True)
