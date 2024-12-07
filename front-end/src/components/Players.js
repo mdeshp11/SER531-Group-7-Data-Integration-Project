@@ -65,9 +65,9 @@ function Players() {
     setSearchTerm(""); // Clear search term on category change
   };
 
-  const handleSearchChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
+  // const handleSearchChange = (event) => {
+  //   setSearchTerm(event.target.value);
+  // };
 
   const renderTable = () => {
     if (!clutchData || !selectedTeam || !clutchData[selectedTeam]) {
@@ -129,16 +129,6 @@ function Players() {
           <option value="Bowlers">Bowlers</option>
           <option value="Fielders">Fielders</option>
         </select>
-      </div>
-      <div className="search-container">
-        {/* Search input to filter rows */}
-        <input
-          type="text"
-          placeholder="Search..."
-          value={searchTerm}
-          onChange={handleSearchChange}
-          className="search-input"
-        />
       </div>
       {renderTable()}
     </div>
