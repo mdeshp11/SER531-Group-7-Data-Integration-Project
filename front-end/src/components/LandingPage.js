@@ -17,8 +17,8 @@ function LandingPage() {
           <button onClick={() => navigate("/venue")} className="feature-btn">
             Venues
           </button>
-          <button onClick={() => navigate("/feature2")} className="feature-btn">
-            Feature 2
+          <button onClick={() => navigate("/average")} className="feature-btn">
+            Team Average
           </button>
         </div>
         <div className="right-buttons">

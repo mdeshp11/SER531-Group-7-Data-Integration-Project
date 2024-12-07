@@ -1,0 +1,106 @@
+/* Main container styling */
+.team-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background-image: url("/Users/nishaverma/Desktop/SER531/SER531-Group-7-Data-Integration-Project/front-end/public/cricket-stadium.jpg"); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    padding: 20px;
+    padding-top: 50px;
+  }
+  
+  /* Header styling */
+  .team-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+    color: #ffd700; /* Gold color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Dropdown container styling */
+  .dropdown-container {
+    margin-bottom: 20px;
+  }
+  
+  .team-select {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ffd700;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    transition: border-color 0.6s ease;
+  }
+  
+  .team-select:hover {
+    border-color: #ffa500;
+  }
+  
+  .team-select:focus {
+    outline: none;
+    box-shadow: 0 0 10px #ffa500;
+  }
+  
+  /* Stats container styling */
+  .stats-container {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+  }
+  
+  /* Chart container styling */
+  .chart-container {
+    width: 100%;
+    max-width: 600px;
+    height: 360px;
+    padding-bottom: 40px;
+    margin: auto;
+  }
+  
+  .team-name {
+    font-size: 1.8rem;
+    color: #ffd700;
+    margin-bottom: 20px;
+  }
+
+/* Animation for the team logo */
+.team-logo {
+    position: fixed;
+    top: -100px; /* Start outside the viewport */
+    left: 130px; /* Bottom left corner */
+    width: 200px;
+    height: 200px;
+    animation: dropLogo 2s ease-in-out forwards;
+    z-index: 100;
+}
+  
+  /* Define the drop animation */
+  @keyframes dropLogo {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(600px); /* Adjust based on the desired final position */
+      opacity: 1;
+    }
+  }
+  
+  

@@ -46,11 +46,11 @@ bowling_first = """
     """
 
 
-
 # PREFIX smw: <http://example.org/ipl/1.0.0/deliveries_one#>
 # PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-# SELECT ?batter ?totalRuns (IF(?totalDeliveries > 0, (?totalRuns / ?totalDeliveries) * 100, 0) AS ?strikeRate)
+# SELECT ?batter ?totalRuns (IF(?totalDeliveries > 0,
+# (?totalRuns / ?totalDeliveries) * 100, 0) AS ?strikeRate)
 # WHERE {
 #   {
 #     SELECT ?batter (SUM(?runs) AS ?totalRuns)
@@ -88,11 +88,11 @@ clutch_bowler = """
         }
         GROUP BY ?bowler
     }
-  
+
     ?player smw:hasPlayerName ?bowler ;
             smw:belongsToTeam ?teamName .
     }
-    HAVING (?totalWickets >= 10) 
+    HAVING (?totalWickets >= 10)
     ORDER BY DESC(?totalWickets)
 """
 
@@ -101,33 +101,41 @@ clutch_batsman = """
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-    SELECT ?batter ?teamName ?totalRuns
-        (IF(?totalDeliveries > 0, (?totalRuns / ?totalDeliveries) * 100, 0) AS ?strikeRate)
+    SELECT
+        ?batter
+        ?teamName
+        ?totalRuns
+        (IF(?totalDeliveries > 0, (?totalRuns / ?totalDeliveries) * 100, 0)
+        AS ?strikeRate)
     WHERE {
-    {
-        SELECT ?batter (SUM(?runs) AS ?totalRuns)
-        WHERE {
-        ?delivery smw:hasBatter ?batter ;
-                    smw:totalRuns ?runs ;
-                    smw:overNumber ?over ;
-      			    smw:wasDeliveredIn ?match . 
-        FILTER (?over >= 15 && ?over <= 19)
+        {
+            SELECT
+                ?batter
+                (SUM(?runs) AS ?totalRuns)
+            WHERE {
+                ?delivery smw:hasBatter ?batter ;
+                          smw:totalRuns ?runs ;
+                          smw:overNumber ?over ;
+                          smw:wasDeliveredIn ?match .
+                FILTER (?over >= 15 && ?over <= 19)
+            }
+            GROUP BY ?batter
         }
-        GROUP BY ?batter
-    }
-    OPTIONAL {
-        SELECT ?batter (COUNT(?delivery) AS ?totalDeliveries)
-        WHERE {
-        ?delivery smw:hasBatter ?batter ;
-                    smw:overNumber ?over ;
-                    smw:wasDeliveredIn ?match .
-        FILTER (?over >= 15 && ?over <= 19)
+        OPTIONAL {
+            SELECT
+                ?batter
+                (COUNT(?delivery) AS ?totalDeliveries)
+            WHERE {
+                ?delivery smw:hasBatter ?batter ;
+                          smw:overNumber ?over ;
+                          smw:wasDeliveredIn ?match .
+                FILTER (?over >= 15 && ?over <= 19)
+            }
+            GROUP BY ?batter
         }
-        GROUP BY ?batter
-    }
 
-    ?player smw:hasPlayerName ?batter ;
-            smw:belongsToTeam ?teamName .
+        ?player smw:hasPlayerName ?batter ;
+                smw:belongsToTeam ?teamName .
     }
     ORDER BY DESC(?totalRuns) DESC(?strikeRate)
     LIMIT 50
@@ -138,7 +146,8 @@ clutch_fielder = """
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-    SELECT ?fielder ?teamName (COUNT(?catchDelivery) AS ?catches) (COUNT(?runoutDelivery) AS ?runouts)
+    SELECT ?fielder ?teamName (COUNT(?catchDelivery) AS ?catches)
+    (COUNT(?runoutDelivery) AS ?runouts)
         (?catches + ?runouts AS ?totalContributions)
     WHERE {
     # Extract deliveries
@@ -159,7 +168,7 @@ clutch_fielder = """
         ?delivery smw:dismissalKind "run out" .
         BIND(?delivery AS ?runoutDelivery)
     }
-  
+
     ?player smw:hasPlayerName ?fielder ;
             smw:belongsToTeam ?teamName .
 
@@ -167,12 +176,13 @@ clutch_fielder = """
     GROUP BY ?teamName ?fielder
     ORDER BY DESC(?totalContributions)
 """
-#average score batting first = """
-#PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# average score batting first = """
+# PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 #   PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 #    PREFIX smw: <http://example.org/ipl/1.0.0/matches#>
-#    
-#    SELECT ?team (ROUND(AVG(?adjustedTargetRuns)) AS ?averageScoreBattingFirst)
+#
+#    SELECT ?team (ROUND(AVG(?adjustedTargetRuns))
+# AS ?averageScoreBattingFirst)
 #    WHERE {
 #      {
 #        # Case 1: Team wins the toss and chooses to bat
@@ -189,8 +199,8 @@ clutch_fielder = """
 #               smw:tossWinner ?opponent;
 #               smw:tossDecision "field";
 #              smw:targetRuns ?targetRuns.
-#        FILTER(?targetRuns != "NA") 
-#        FILTER(?team != ?opponent) 
+#        FILTER(?targetRuns != "NA")
+#        FILTER(?team != ?opponent)
 #        BIND(xsd:integer(?targetRuns) - 1 AS ?adjustedTargetRuns)
 #      }
 #   }
@@ -202,7 +212,7 @@ batting_first = """
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX smw: <http://example.org/ipl/1.0.0/matches#>
-   
+
     SELECT ?team (ROUND(AVG(?adjustedTargetRuns)) AS ?averageScoreBattingFirst)
     WHERE {
         {
@@ -220,8 +230,8 @@ batting_first = """
                 smw:tossWinner ?opponent;
                 smw:tossDecision "field";
                 smw:targetRuns ?targetRuns.
-        FILTER(?targetRuns != "NA") 
-        FILTER(?team != ?opponent) 
+        FILTER(?targetRuns != "NA")
+        FILTER(?team != ?opponent)
         BIND(xsd:integer(?targetRuns) - 1 AS ?adjustedTargetRuns)
         }
     }
@@ -233,7 +243,8 @@ player_dismissal = """
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-    SELECT ?player_dismissed ?teamName ?dismissalKind (COUNT(?delivery) AS ?dismissalCount)
+    SELECT ?player_dismissed ?teamName ?dismissalKind (COUNT(?delivery)
+    AS ?dismissalCount)
     WHERE {
     # Retrieve player dismissal details
     ?delivery smw:hasPlayerDismissed ?player_dismissed ;
@@ -241,7 +252,7 @@ player_dismissal = """
                 smw:overNumber ?over ;
                 smw:wasDeliveredIn ?match ;
                 smw:dismissalKind ?dismissalKind .
-            
+
     # Fetch team name for the dismissed player
     ?player smw:hasPlayerName ?player_dismissed ;
             smw:belongsToTeam ?teamName .
