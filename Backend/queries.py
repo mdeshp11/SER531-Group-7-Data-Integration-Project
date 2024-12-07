@@ -156,33 +156,33 @@ clutch_fielder = """
     GROUP BY ?teamName ?fielder
     ORDER BY DESC(?totalContributions)
 """
-average score batting first = """
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX smw: <http://example.org/ipl/1.0.0/matches#>
-
-SELECT ?team (ROUND(AVG(?adjustedTargetRuns)) AS ?averageScoreBattingFirst)
-WHERE {
-  {
-    # Case 1: Team wins the toss and chooses to bat
-    ?match smw:tossWinner ?team;
-           smw:tossDecision "bat";
-           smw:targetRuns ?targetRuns.
-    FILTER(?targetRuns != "NA") # Exclude cases where targetRuns is "NA"
-    BIND(xsd:integer(?targetRuns) - 1 AS ?adjustedTargetRuns)
-  }
-  UNION
-  {
-    # Case 2: Team loses the toss but bats first
-    ?match smw:hasTeam1 ?team;
-           smw:tossWinner ?opponent;
-           smw:tossDecision "field";
-           smw:targetRuns ?targetRuns.
-    FILTER(?targetRuns != "NA") 
-    FILTER(?team != ?opponent) 
-    BIND(xsd:integer(?targetRuns) - 1 AS ?adjustedTargetRuns)
-  }
-}
-GROUP BY ?team
-ORDER BY DESC(?averageScoreBattingFirst)
-    """
+#average score batting first = """
+#PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+#   PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+#    PREFIX smw: <http://example.org/ipl/1.0.0/matches#>
+#    
+#    SELECT ?team (ROUND(AVG(?adjustedTargetRuns)) AS ?averageScoreBattingFirst)
+#    WHERE {
+#      {
+#        # Case 1: Team wins the toss and chooses to bat
+#        ?match smw:tossWinner ?team;
+#               smw:tossDecision "bat";
+#               smw:targetRuns ?targetRuns.
+#        FILTER(?targetRuns != "NA") # Exclude cases where targetRuns is "NA"
+#        BIND(xsd:integer(?targetRuns) - 1 AS ?adjustedTargetRuns)
+#      }
+#      UNION
+#      {
+#        # Case 2: Team loses the toss but bats first
+#        ?match smw:hasTeam1 ?team;
+#               smw:tossWinner ?opponent;
+#               smw:tossDecision "field";
+#              smw:targetRuns ?targetRuns.
+#        FILTER(?targetRuns != "NA") 
+#        FILTER(?team != ?opponent) 
+#        BIND(xsd:integer(?targetRuns) - 1 AS ?adjustedTargetRuns)
+#      }
+#   }
+#    GROUP BY ?team
+#    ORDER BY DESC(?averageScoreBattingFirst)
+#       """
