@@ -16,8 +16,6 @@ app = Flask(__name__)
 CORS(app, origins="*")
 
 # Main function to call the fuseki api server
-
-
 def execute_sparql_query(query):
     headers = {"Content-Type": "application/sparql-query"}
     try:
@@ -31,8 +29,6 @@ def execute_sparql_query(query):
 
 
 # Venue Statistics API
-
-
 @app.route("/api/ipl_server", methods=["GET"])
 def venue_statistics():
 
@@ -64,8 +60,6 @@ def venue_statistics():
 
 # Team Stats API
 # TODO: Review query once
-
-
 @app.route("/api/ipl_server/team_stats", methods=["GET"])
 def team_stats():
     # Fetch bowling stats
@@ -126,8 +120,6 @@ def get_batting_stats():
 
 
 # clutch players API
-
-
 @app.route("/api/ipl_server/clutch_players", methods=["GET"])
 def clutch_players():
     # Getting Clutch bowlers
@@ -169,8 +161,6 @@ def clutch_players():
 
 
 # Helper function to get the clutch bowlers
-
-
 def clutch_bowlers():
     # fetch players
     result = execute_sparql_query(clutch_bowler)
@@ -195,8 +185,6 @@ def clutch_bowlers():
 
 
 # Helper function to get the clutch batsmen
-
-
 def clutch_batsmen():
     result = execute_sparql_query(clutch_batsman)
     if "error" in result:
@@ -223,8 +211,6 @@ def clutch_batsmen():
 
 
 # Helper function to get the clutch fielders
-
-
 def clutch_fielders():
     result = execute_sparql_query(clutch_fielder)
     if "error" in result:
@@ -256,8 +242,6 @@ def clutch_fielders():
 
 
 # Player Dismissal API
-
-
 @app.route("/api/ipl_server/player_dismissals", methods=["GET"])
 def player_dismissals():
     result = execute_sparql_query(player_dismissal)

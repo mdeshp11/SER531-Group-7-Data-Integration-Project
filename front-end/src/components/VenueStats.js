@@ -7,7 +7,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import "./VenueStats.css"; // Import the CSS file
+import "./VenueStats.css";
 
 // Register required Chart.js components
 ChartJS.register(ArcElement, Tooltip, Legend);
